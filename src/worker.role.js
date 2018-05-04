@@ -18,10 +18,10 @@ var roleWorker = {
                 creep.say("🔄 harvest!!");
             }
         }
-        else {
-            if(creep.transfer(Game.spawns['Seed'], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
-                creep.moveTo(Game.spawns['Seed']);
-                creep.say("🚗🏠");
+        else if (Game.spawns['Seed'].energy >= Game.spawns['Seed'].energyCapacity) {
+            if(creep.upgradeController(creep.room.controller) === ERR_NOT_IN_RANGE) {
+                creep.moveTo(creep.room.controller, {visualizePathStyle: {stroke: '#ffffff'}});
+                creep.say("🔄");
             }
         }
     }
