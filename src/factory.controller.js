@@ -14,7 +14,7 @@ module.exports = {
     },
 
     initMemory: function () {
-        Memory.creepCapacity = 3;
+        Memory.creepCapacity = 4;
     },
 
     processTick: function () {
