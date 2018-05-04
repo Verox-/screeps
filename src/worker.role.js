@@ -22,10 +22,11 @@ module.exports = {
 
     /** @param {Creep} creep **/
     run: function(parameters) {
-        this.think(parameters);
+        this.think(parameters.creep);
     },
 
     think: function (creep) {
+
         switch (creep.memory.role) {
             case "builder":
                 this.thinkBuilder(creep);
