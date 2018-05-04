@@ -34,14 +34,14 @@ module.exports = {
             var harvestResult = creep.harvest(sources[0]);
             if(harvestResult === ERR_NOT_IN_RANGE) {
                 creep.moveTo(sources[0],{visualizePathStyle: {stroke: '#ffffff'}});
-                creep.say("MH\u{1F601}");
+                creep.say("\u{1F697}\u{26A1}");
             }
             else if (_.sum(creep.carry) >= creep.carryCapacity)
             {
                 creep.memory.eating = false;
             }
             else if (harvestResult === OK) {
-                creep.say("HH");
+                creep.say("\u{1F50C}\u{26A1}");
                 creep.memory.eating = true;
             }
             console.log

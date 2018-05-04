@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31d1bb86-9592-4319-aca5-1a030be0982b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/worker.role.js" afterPath="$PROJECT_DIR$/src/worker.role.js" />
     </list>
@@ -20,7 +21,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-              <folding />
+              <folding>
+                <marker date="1525468816260" expanded="true" signature="197:342" ph="{...}" />
+                <marker date="1525468816260" expanded="true" signature="254:340" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -29,8 +33,15 @@
         <entry file="file://$PROJECT_DIR$/src/creep.controller.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-              <folding />
+              <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+              <folding>
+                <marker date="1525468816251" expanded="true" signature="17:414" ph="{...}" />
+                <marker date="1525468816251" expanded="true" signature="42:147" ph="{...}" />
+                <marker date="1525468816251" expanded="true" signature="171:206" ph="{...}" />
+                <marker date="1525468816251" expanded="true" signature="237:245" ph="{...}" />
+                <marker date="1525468816251" expanded="true" signature="277:411" ph="{...}" />
+                <marker date="1525468816251" expanded="true" signature="314:405" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -38,8 +49,8 @@
       <file leaf-file-name="worker.role.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/worker.role.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="36" column="38" lean-forward="false" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+            <state relative-caret-position="331">
+              <caret line="49" column="58" lean-forward="false" selection-start-line="49" selection-start-column="58" selection-end-line="49" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -49,8 +60,16 @@
         <entry file="file://$PROJECT_DIR$/src/factory.controller.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-              <folding />
+              <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+              <folding>
+                <marker date="1525472729706" expanded="true" signature="17:814" ph="{...}" />
+                <marker date="1525472729706" expanded="true" signature="42:199" ph="{...}" />
+                <marker date="1525472729706" expanded="true" signature="223:258" ph="{...}" />
+                <marker date="1525472729706" expanded="true" signature="289:330" ph="{...}" />
+                <marker date="1525472729706" expanded="true" signature="362:603" ph="{...}" />
+                <marker date="1525472729706" expanded="true" signature="399:597" ph="{...}" />
+                <marker date="1525472729706" expanded="true" signature="645:812" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -239,7 +258,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525455977840</updated>
-      <workItem from="1525455983912" duration="15665000" />
+      <workItem from="1525455983912" duration="16016000" />
     </task>
     <task id="LOCAL-00001" summary="Initial structure test">
       <created>1525460622149</created>
@@ -395,11 +414,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525473236471</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Emojis test again.">
+      <created>1525473696388</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1525473696388</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15665000" />
+    <option name="totallyTimeSpent" value="16016000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2552" y="-8" width="1936" height="1056" extended-state="6" />
@@ -455,7 +481,8 @@
     <MESSAGE value="Still trying to cure stupidity." />
     <MESSAGE value="Preventing greedy creeps." />
     <MESSAGE value="Upped creep capacity." />
-    <option name="LAST_COMMIT_MESSAGE" value="Upped creep capacity." />
+    <MESSAGE value="Emojis test again." />
+    <option name="LAST_COMMIT_MESSAGE" value="Emojis test again." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -465,8 +492,15 @@
     <entry file="file://$PROJECT_DIR$/src/creep.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-          <folding />
+          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding>
+            <marker date="1525468816251" expanded="true" signature="17:414" ph="{...}" />
+            <marker date="1525468816251" expanded="true" signature="42:147" ph="{...}" />
+            <marker date="1525468816251" expanded="true" signature="171:206" ph="{...}" />
+            <marker date="1525468816251" expanded="true" signature="237:245" ph="{...}" />
+            <marker date="1525468816251" expanded="true" signature="277:411" ph="{...}" />
+            <marker date="1525468816251" expanded="true" signature="314:405" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -474,22 +508,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-          <folding />
+          <folding>
+            <marker date="1525468816260" expanded="true" signature="197:342" ph="{...}" />
+            <marker date="1525468816260" expanded="true" signature="254:340" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/factory.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-          <folding />
+          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding>
+            <marker date="1525472729706" expanded="true" signature="17:814" ph="{...}" />
+            <marker date="1525472729706" expanded="true" signature="42:199" ph="{...}" />
+            <marker date="1525472729706" expanded="true" signature="223:258" ph="{...}" />
+            <marker date="1525472729706" expanded="true" signature="289:330" ph="{...}" />
+            <marker date="1525472729706" expanded="true" signature="362:603" ph="{...}" />
+            <marker date="1525472729706" expanded="true" signature="399:597" ph="{...}" />
+            <marker date="1525472729706" expanded="true" signature="645:812" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/worker.role.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="36" column="38" lean-forward="false" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+        <state relative-caret-position="331">
+          <caret line="49" column="58" lean-forward="false" selection-start-line="49" selection-start-column="58" selection-end-line="49" selection-end-column="58" />
           <folding />
         </state>
       </provider>
