@@ -13,7 +13,7 @@ var roleWorker = {
             var sources = creep.room.find(FIND_SOURCES);
             var harvestResult = creep.harvest(sources[0]);
             if(harvestResult === ERR_NOT_IN_RANGE) {
-                creep.moveTo(sources[0],{visualizePathStyle: {stroke: '#ffffff'});
+                creep.moveTo(sources[0],{visualizePathStyle: {stroke: '#ffffff'}});
                 creep.say("MH");
             }
             else if (harvestResult === OK) {
@@ -27,7 +27,7 @@ var roleWorker = {
             }
         }
         else if (creep.transfer(Game.spawns['Seed'], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
-            creep.moveTo(Game.spawns['Seed'], {visualizePathStyle: {stroke: '#ffffff'});
+            creep.moveTo(Game.spawns['Seed'], {visualizePathStyle: {stroke: '#ffffff'}});
             creep.say("MS");
         }
         else {
