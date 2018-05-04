@@ -24,7 +24,11 @@ module.exports = {
     run: function(parameters) {
         var creep = parameters.creep;
 
-        if (creep.memory.eating === undefined) creep.memory.eating = false;
+        if (creep.memory.eating === undefined)
+        {
+            console.log
+            creep.memory.eating = false;
+        }
         if(creep.carry.energy <= 0 || creep.memory.eating) {
             var sources = creep.room.find(FIND_SOURCES);
             var harvestResult = creep.harvest(sources[0]);
@@ -32,7 +36,7 @@ module.exports = {
                 creep.moveTo(sources[0],{visualizePathStyle: {stroke: '#ffffff'}});
                 creep.say("MH");
             }
-            else if (creep.carry >= creep.carryCapacity)
+            else if (_.sum(creep.carry) >= creep.carryCapacity)
             {
                 creep.memory.eating = false;
             }
