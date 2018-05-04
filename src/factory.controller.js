@@ -20,8 +20,8 @@ module.exports = {
     },
 
     processTick: function () {
-        for (var i in Game.spawns) {
-            var spawn = Game.spawns[i];
+        for (let i in Game.spawns) {
+            let spawn = Game.spawns[i];
 
             if (spawn.spawning || Object.keys(Game.creeps).length >= Memory.creepCapacity) return;
 
@@ -34,8 +34,8 @@ module.exports = {
     },
 
     spawnCreep: function (spawn, role) {
-        var name = Math.random().toString(36).substring(7);
-        spawn.createCreep([WORK, MOVE, CARRY], name, {role: role})
-        Game.creeps[name].init()
+        let name = Math.random().toString(36).substring(7);
+        spawn.createCreep([WORK, MOVE, CARRY], name, {role: role});
+        Game.creeps[name].init();
     }
 };
