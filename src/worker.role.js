@@ -34,7 +34,7 @@ module.exports = {
             var harvestResult = creep.harvest(sources[0]);
             if(harvestResult === ERR_NOT_IN_RANGE) {
                 creep.moveTo(sources[0],{visualizePathStyle: {stroke: '#ffffff'}});
-                creep.say("MH");
+                creep.say("MH\uD83D\uDE00");
             }
             else if (_.sum(creep.carry) >= creep.carryCapacity)
             {
