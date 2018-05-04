@@ -12,14 +12,14 @@ module.exports = {
     },
 
     initMemory: function () {
-        Memory.creepCapacity = 10;
+        Memory.creepCapacity = 3;
     },
 
     processTick: function () {
         for (var i in Game.spawns) {
             var spawn = Game.spawns[i];
 
-            if (spawn.spawning) return;
+            if (spawn.spawning || Game.spawns.length >= Memory.creepCapacity) return;
 
             this.spawnCreep(spawn, "worker");
         }
