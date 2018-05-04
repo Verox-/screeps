@@ -1,28 +1,33 @@
 var roleWorker = {
 
     init: function () {
-        memory.role = "worker";
+        memory.archtype = "worker";
+        memory.role = "miner";
+        memory.level = 1;
     },
 
     /** @param {Creep} creep **/
     run: function(parameters) {
         var creep = parameters.creep;
-        if(creep.carry.energy < creep.carryCapacity) {
+        if(creep.carry.energy <= 0) {
             var sources = creep.room.find(FIND_SOURCES);
             var harvestResult = creep.harvest(sources[0]);
             if(harvestResult === ERR_NOT_IN_RANGE) {
                 creep.moveTo(sources[0]);
-                creep.say("🔄 harvest");
+                creep.say("MH");
             }
             else if (harvestResult === OK) {
-                creep.say("🔄 harvest!!");
+                creep.say("HH");
             }
         }
         else if (Game.spawns['Seed'].energy >= Game.spawns['Seed'].energyCapacity) {
             if(creep.upgradeController(creep.room.controller) === ERR_NOT_IN_RANGE) {
                 creep.moveTo(creep.room.controller, {visualizePathStyle: {stroke: '#ffffff'}});
-                creep.say("🔄");
+                creep.say("MU");
             }
+        }
+        if(creep.transfer(Game.spawns['Seed'], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
+            creep.moveTo(Game.spawns['Seed']);
         }
     }
 };
