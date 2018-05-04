@@ -36,6 +36,5 @@ module.exports = {
     spawnCreep: function (spawn, role) {
         let name = Math.random().toString(36).substring(7);
         spawn.createCreep([WORK, MOVE, CARRY], name, {role: role});
-        Game.creeps[name].init();
     }
 };
