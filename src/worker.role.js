@@ -7,17 +7,24 @@ module.exports = {
         ],
     },
 
-    init: function (creep, role, level) {
-        creep.memory.role = "miner";
-        creep.memory.level = 1;
+    init: function (role, level) {
+        if (creep.memory.role === undefined)
+        {
+            console.log("Setting uninitialized role.");
+            creep.memory.role = role;
+        }
+
+        creep.memory.level = level;
         creep.memory.eating = false;
+
+        console.log("Initialized a new creep.");
     },
 
     /** @param {Creep} creep **/
     run: function(parameters) {
         var creep = parameters.creep;
 
-
+        if (creep.memory.eating === undefined) creep.memory.eating = false;
         if(creep.carry.energy <= 0 || creep.memory.eating) {
             var sources = creep.room.find(FIND_SOURCES);
             var harvestResult = creep.harvest(sources[0]);
