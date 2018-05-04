@@ -16,4 +16,4 @@ var roleWorker = {
     }
 };
 
-module.exports = roleHarvester;
+module.exports = roleWorker;
