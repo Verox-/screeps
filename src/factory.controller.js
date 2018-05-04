@@ -30,7 +30,7 @@ module.exports = {
             if (_.sum(_.filter(Game.creeps, (creep) => creep.memory.role === 'miner')) < Memory.minerCapacity)
                 this.spawnCreep(spawn, "miner");
 
-            if (_.sum(_.filter(Game.creeps, (creep) => creep.memory.role === 'builder')) < Memory.builderCapacity)
+            else if (_.sum(_.filter(Game.creeps, (creep) => creep.memory.role === 'builder')) < Memory.builderCapacity)
                 this.spawnCreep(spawn, "builder");
         }
     },
