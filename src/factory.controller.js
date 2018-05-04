@@ -4,6 +4,8 @@ module.exports = {
         if (Memory.factoryIsInitialized === true)
             return;
 
+        console.log("Initializing worker memory");
+
         this.initMemory();
     },
 

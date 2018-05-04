@@ -12,11 +12,16 @@ var roleWorker = {
             var harvestResult = creep.harvest(sources[0]);
             if(harvestResult === ERR_NOT_IN_RANGE) {
                 creep.moveTo(sources[0]);
+                creep.say("🚗🍴");
+            }
+            else if (harvestResult === OK) {
+                creep.say("🍴!!");
             }
         }
         else {
             if(creep.transfer(Game.spawns['Seed'], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
                 creep.moveTo(Game.spawns['Seed']);
+                creep.say("🚗🏠");
             }
         }
     }
