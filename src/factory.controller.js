@@ -19,7 +19,7 @@ module.exports = {
         for (var i in Game.spawns) {
             var spawn = Game.spawns[i];
 
-            if (spawn.spawning || Game.creeps.length >= Memory.creepCapacity) return;
+            if (spawn.spawning || Object.keys(Game.creeps).length >= Memory.creepCapacity) return;
 
             this.spawnCreep(spawn, "worker");
         }
