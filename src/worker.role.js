@@ -7,7 +7,7 @@ module.exports = {
         ],
     },
 
-    init: function (role, level) {
+    init: function (creep, role, level) {
         if (creep.memory.role === undefined)
         {
             console.log("Setting uninitialized role.");
@@ -22,11 +22,29 @@ module.exports = {
 
     /** @param {Creep} creep **/
     run: function(parameters) {
-        var creep = parameters.creep;
+        this.think(parameters);
+    },
 
+    think: function (creep) {
+        switch (creep.memory.role) {
+            case "builder":
+                this.thinkBuilder(creep);
+                break;
+            case "miner":
+                this.thinkMiner(creep);
+                break;
+            default:
+                creep.say("\u{1F92A} UNK ROLE");
+        }
+    },
+
+    thinkMiner: function (creep) {
+
+    },
+
+    thinkBuilder: function (creep) {
         if (creep.memory.eating === undefined)
         {
-            console.log
             creep.memory.eating = false;
         }
         if(creep.carry.energy <= 0 || creep.memory.eating) {
@@ -44,7 +62,6 @@ module.exports = {
                 creep.say("\u{1F50C}\u{26A1}");
                 creep.memory.eating = true;
             }
-            console.log
         }
         else if (Game.spawns['Seed'].energy >= Game.spawns['Seed'].energyCapacity) {
             if(creep.upgradeController(Game.spawns['Seed'].room.controller) === ERR_NOT_IN_RANGE) {
@@ -61,7 +78,5 @@ module.exports = {
         }
     },
 
-    checkDroppedResource: function () {
 
-    }
 };

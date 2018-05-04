@@ -15,6 +15,8 @@ module.exports = {
 
     initMemory: function () {
         Memory.creepCapacity = 4;
+        Memory.minerCapacity = 4;
+        Memory.builderCapacity = 4;
     },
 
     processTick: function () {
@@ -23,7 +25,11 @@ module.exports = {
 
             if (spawn.spawning || Object.keys(Game.creeps).length >= Memory.creepCapacity) return;
 
-            this.spawnCreep(spawn, "worker");
+            if (_.sum(_.filter(Game.creeps, (creep) => creep.memory.role === 'miner')) < Memory.minerCapacity)
+                this.spawnCreep(spawn, "miner");
+
+            if (_.sum(_.filter(Game.creeps, (creep) => creep.memory.role === 'builder')) < Memory.builderCapacity)
+                this.spawnCreep(spawn, "builder");
         }
     },
 
