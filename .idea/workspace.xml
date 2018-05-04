@@ -4,6 +4,7 @@
     <list default="true" id="31d1bb86-9592-4319-aca5-1a030be0982b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/factory.controller.js" afterPath="$PROJECT_DIR$/src/factory.controller.js" />
+      <change beforePath="$PROJECT_DIR$/src/worker.role.js" afterPath="$PROJECT_DIR$/src/worker.role.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,21 +36,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="worker.role.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="worker.role.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/worker.role.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+            <state relative-caret-position="399">
+              <caret line="78" column="27" lean-forward="false" selection-start-line="78" selection-start-column="27" selection-end-line="78" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="factory.controller.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="factory.controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/factory.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+            <state relative-caret-position="136">
+              <caret line="20" column="43" lean-forward="false" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -77,8 +78,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/creep.controller.js" />
-        <option value="$PROJECT_DIR$/src/worker.role.js" />
         <option value="$PROJECT_DIR$/src/factory.controller.js" />
+        <option value="$PROJECT_DIR$/src/worker.role.js" />
       </list>
     </option>
   </component>
@@ -239,7 +240,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525455977840</updated>
-      <workItem from="1525455983912" duration="18338000" />
+      <workItem from="1525455983912" duration="18658000" />
     </task>
     <task id="LOCAL-00001" summary="Initial structure test">
       <created>1525460622149</created>
@@ -430,11 +431,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525476265659</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Removed init">
+      <created>1525476366952</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1525476366952</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18338000" />
+    <option name="totallyTimeSpent" value="18658000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2552" y="-8" width="1936" height="1056" extended-state="6" />
@@ -495,21 +503,14 @@
     <MESSAGE value="Multi role test" />
     <MESSAGE value="Fixed dumb bug" />
     <MESSAGE value="Still trying to get init working." />
-    <option name="LAST_COMMIT_MESSAGE" value="Still trying to get init working." />
+    <MESSAGE value="Removed init" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed init" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/creep.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -518,18 +519,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/worker.role.js">
+    <entry file="file://$PROJECT_DIR$/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+        <state relative-caret-position="85">
+          <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/factory.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+        <state relative-caret-position="136">
+          <caret line="20" column="43" lean-forward="false" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/worker.role.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="78" column="27" lean-forward="false" selection-start-line="78" selection-start-column="27" selection-end-line="78" selection-end-column="27" />
           <folding />
         </state>
       </provider>

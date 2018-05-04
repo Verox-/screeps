@@ -17,6 +17,8 @@ module.exports = {
         Memory.creepCapacity = 4;
         Memory.minerCapacity = 4;
         Memory.builderCapacity = 4;
+
+        Memory.factoryIsInitialized = true;
     },
 
     processTick: function () {

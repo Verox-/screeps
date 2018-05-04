@@ -40,10 +40,6 @@ module.exports = {
     },
 
     thinkMiner: function (creep) {
-
-    },
-
-    thinkBuilder: function (creep) {
         if (creep.memory.eating === undefined)
         {
             creep.memory.eating = false;
@@ -77,6 +73,10 @@ module.exports = {
         else {
             creep.say("\u{1F601}");
         }
+    },
+
+    thinkBuilder: function (creep) {
+        creep.say("\u{1F634}");
     },
 
 
