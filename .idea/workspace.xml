@@ -38,8 +38,8 @@
       <file leaf-file-name="worker.role.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/worker.role.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+            <state relative-caret-position="544">
+              <caret line="32" column="50" lean-forward="false" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -236,7 +236,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525455977840</updated>
-      <workItem from="1525455983912" duration="6456000" />
+      <workItem from="1525455983912" duration="7101000" />
     </task>
     <task id="LOCAL-00001" summary="Initial structure test">
       <created>1525460622149</created>
@@ -294,11 +294,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525462944869</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Removed creeps ADHD.">
+      <created>1525463163514</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1525463163514</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6456000" />
+    <option name="totallyTimeSpent" value="7101000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2552" y="-8" width="1936" height="1056" extended-state="6" />
@@ -344,7 +351,8 @@
     <MESSAGE value="Game.creeps.length === undefined. Workaround for that." />
     <MESSAGE value="Creeps can now speak!" />
     <MESSAGE value="Creeps now upgrade if the spawn is max energy." />
-    <option name="LAST_COMMIT_MESSAGE" value="Creeps now upgrade if the spawn is max energy." />
+    <MESSAGE value="Removed creeps ADHD." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed creeps ADHD." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -377,8 +385,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/worker.role.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        <state relative-caret-position="544">
+          <caret line="32" column="50" lean-forward="false" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
           <folding />
         </state>
       </provider>
