@@ -1,7 +1,13 @@
-var roleWorker = {
+module.exports = {
 
-    init: function (creep) {
-        creep.memory.archtype = "worker";
+    config: {
+        levels: [
+            [WORK, CARRY, MOVE],
+            [WORK, WORK, CARRY, MOVE]
+        ],
+    },
+
+    init: function (creep, role, level) {
         creep.memory.role = "miner";
         creep.memory.level = 1;
         creep.memory.eating = false;
@@ -10,6 +16,8 @@ var roleWorker = {
     /** @param {Creep} creep **/
     run: function(parameters) {
         var creep = parameters.creep;
+
+
         if(creep.carry.energy <= 0 || creep.memory.eating) {
             var sources = creep.room.find(FIND_SOURCES);
             var harvestResult = creep.harvest(sources[0]);
@@ -17,7 +25,7 @@ var roleWorker = {
                 creep.moveTo(sources[0],{visualizePathStyle: {stroke: '#ffffff'}});
                 creep.say("MH");
             }
-            else if (harvestResult === ERR_FULL)
+            else if (creep.carry >= creep.carryCapacity)
             {
                 creep.memory.eating = false;
             }
@@ -25,6 +33,7 @@ var roleWorker = {
                 creep.say("HH");
                 creep.memory.eating = true;
             }
+            console.log
         }
         else if (Game.spawns['Seed'].energy >= Game.spawns['Seed'].energyCapacity) {
             if(creep.upgradeController(Game.spawns['Seed'].room.controller) === ERR_NOT_IN_RANGE) {
@@ -39,7 +48,9 @@ var roleWorker = {
         else {
             creep.say("😵");
         }
+    },
+
+    checkDroppedResource: function () {
+
     }
 };
-
-module.exports = roleWorker;

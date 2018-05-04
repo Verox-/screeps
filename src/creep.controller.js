@@ -12,7 +12,7 @@ module.exports = {
     },
 
     initMemory: function () {
-        Memory.creepCapacity = 10;
+
     },
 
     processTick: function () {
