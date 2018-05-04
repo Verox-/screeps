@@ -12,7 +12,7 @@ var roleWorker = {
             var harvestResult = creep.harvest(sources[0]);
             if(harvestResult === ERR_NOT_IN_RANGE) {
                 creep.moveTo(sources[0]);
-                creep.say("🚗🍴");
+                creep.say("🔄 harvest");
             }
             else if (harvestResult === OK) {
                 creep.say("🍴!!");
