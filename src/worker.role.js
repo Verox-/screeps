@@ -13,7 +13,7 @@ var roleWorker = {
             var sources = creep.room.find(FIND_SOURCES);
             var harvestResult = creep.harvest(sources[0]);
             if(harvestResult === ERR_NOT_IN_RANGE) {
-                creep.moveTo(sources[0]);
+                creep.moveTo(sources[0],{visualizePathStyle: {stroke: '#ffffff'});
                 creep.say("MH");
             }
             else if (harvestResult === OK) {
@@ -21,16 +21,17 @@ var roleWorker = {
             }
         }
         else if (Game.spawns['Seed'].energy >= Game.spawns['Seed'].energyCapacity) {
-            if(creep.upgradeController(creep.room.controller) === ERR_NOT_IN_RANGE) {
-                creep.moveTo(creep.room.controller, {visualizePathStyle: {stroke: '#ffffff'}});
+            if(creep.upgradeController(Game.spawns['Seed'].room.controller) === ERR_NOT_IN_RANGE) {
+                creep.moveTo(Game.spawns['Seed'].room.controller, {visualizePathStyle: {stroke: '#ffffff'}});
                 creep.say("MU");
             }
         }
         else if (creep.transfer(Game.spawns['Seed'], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
-            creep.moveTo(Game.spawns['Seed']);
+            creep.moveTo(Game.spawns['Seed'], {visualizePathStyle: {stroke: '#ffffff'});
+            creep.say("MS");
         }
         else {
-            creep.say("I don't know what to do!");
+            creep.say("I'm Confused");
         }
     }
 };

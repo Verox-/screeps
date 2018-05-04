@@ -38,8 +38,8 @@
       <file leaf-file-name="worker.role.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/worker.role.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="50" lean-forward="false" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
+            <state relative-caret-position="255">
+              <caret line="15" column="80" lean-forward="false" selection-start-line="15" selection-start-column="80" selection-end-line="15" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -236,7 +236,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525455977840</updated>
-      <workItem from="1525455983912" duration="7101000" />
+      <workItem from="1525455983912" duration="7325000" />
     </task>
     <task id="LOCAL-00001" summary="Initial structure test">
       <created>1525460622149</created>
@@ -301,11 +301,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525463163514</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="REALLY Removed creeps ADHD.">
+      <created>1525463996762</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1525463996762</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7101000" />
+    <option name="totallyTimeSpent" value="7325000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2552" y="-8" width="1936" height="1056" extended-state="6" />
@@ -352,7 +359,8 @@
     <MESSAGE value="Creeps can now speak!" />
     <MESSAGE value="Creeps now upgrade if the spawn is max energy." />
     <MESSAGE value="Removed creeps ADHD." />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed creeps ADHD." />
+    <MESSAGE value="REALLY Removed creeps ADHD." />
+    <option name="LAST_COMMIT_MESSAGE" value="REALLY Removed creeps ADHD." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -385,8 +393,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/worker.role.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="50" lean-forward="false" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
+        <state relative-caret-position="255">
+          <caret line="15" column="80" lean-forward="false" selection-start-line="15" selection-start-column="80" selection-end-line="15" selection-end-column="80" />
           <folding />
         </state>
       </provider>
