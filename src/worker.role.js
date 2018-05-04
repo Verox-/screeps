@@ -28,10 +28,10 @@ var roleWorker = {
         }
         else if (creep.transfer(Game.spawns['Seed'], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
             creep.moveTo(Game.spawns['Seed'], {visualizePathStyle: {stroke: '#ffffff'}});
-            creep.say("MS");
+            creep.say("MS✔");
         }
         else {
-            creep.say("I'm Confused");
+            creep.say("😵");
         }
     }
 };
