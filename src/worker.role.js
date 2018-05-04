@@ -15,7 +15,7 @@ var roleWorker = {
                 creep.say("🔄 harvest");
             }
             else if (harvestResult === OK) {
-                creep.say("🍴!!");
+                creep.say("🔄 harvest!!");
             }
         }
         else {
