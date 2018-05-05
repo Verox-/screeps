@@ -26,26 +26,31 @@ module.exports = {
 
     think: function (creep) {
 
-        if(_.sum(creep.carry) < creep.carryCapacity) {
-            this.collect(creep);
-        }
-        else {
+        if (!this.collect(creep))
             this.deposit(creep);
-        }
+
     },
 
     collect: function (creep) {
         let resource = creep.pos.findClosestByRange(FIND_DROPPED_RESOURCES);
-        if (resource === null) return;
+        if (resource === null) return false;
 
-        let pickupResult = creep.pickup(resource);
-        if(pickupResult === ERR_NOT_IN_RANGE) {
-            creep.moveTo(resource, {visualizePathStyle: {stroke: '#ffffff'}});
-            creep.say("\u{1F697}\u{26A1}");
+        if(_.sum(creep.carry) < creep.carryCapacity)
+        {
+            let pickupResult = creep.pickup(resource);
+            if(pickupResult === ERR_NOT_IN_RANGE) {
+                creep.moveTo(resource, {visualizePathStyle: {stroke: '#ffffff'}});
+                creep.say("\u{1F697}\u{26A1}");
+            }
+            else {
+                creep.say(pickupResult);
+            }
+
+            return true;
         }
-        else {
-            creep.say(pickupResult);
-        }
+        else // The creep is full.
+            return false;
+
     },
 
     deposit: function (creep) {
