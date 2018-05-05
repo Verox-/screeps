@@ -45,10 +45,10 @@ module.exports = {
         let queuedFerries = 0;
         let queuedConstructors = 0;
 
-        if (spawn.memory.spawnQueue === undefined) {
-        queuedMiners = spawn.memory.spawnQueue.filter(function(item){ return item === "miner"; }).length;
-        queuedFerries = spawn.memory.spawnQueue.filter(function(item){ return item === "ferry"; }).length;
-        queuedConstructors = spawn.memory.spawnQueue.filter(function(item){ return item === "constructor"; }).length;
+        if (spawn.memory.spawnQueue !== undefined) {
+            queuedMiners = spawn.memory.spawnQueue.filter(function(item){ return item === "miner"; }).length;
+            queuedFerries = spawn.memory.spawnQueue.filter(function(item){ return item === "ferry"; }).length;
+            queuedConstructors = spawn.memory.spawnQueue.filter(function(item){ return item === "constructor"; }).length;
         }
 
         if ((liveMiners + queuedMiners) < Memory.minerCapacity)
