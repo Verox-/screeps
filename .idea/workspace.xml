@@ -48,8 +48,8 @@
       <file leaf-file-name="ferry.role.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ferry.role.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="42" column="66" lean-forward="true" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
+            <state relative-caret-position="314">
+              <caret line="53" column="68" lean-forward="true" selection-start-line="53" selection-start-column="68" selection-end-line="53" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -289,7 +289,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525455977840</updated>
-      <workItem from="1525455983912" duration="35491000" />
+      <workItem from="1525455983912" duration="35575000" />
     </task>
     <task id="LOCAL-00001" summary="Initial structure test">
       <created>1525460622149</created>
@@ -606,11 +606,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525529241440</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Implemented ferry deposits to extension and spawn.">
+      <created>1525530147607</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1525530147607</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35491000" />
+    <option name="totallyTimeSpent" value="35575000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2552" y="-8" width="1936" height="1056" extended-state="6" />
@@ -651,7 +658,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Still trying to cure stupidity." />
     <MESSAGE value="Preventing greedy creeps." />
     <MESSAGE value="Upped creep capacity." />
     <MESSAGE value="Emojis test again." />
@@ -676,7 +682,8 @@
     <MESSAGE value="Tried to solve creep ADHD" />
     <MESSAGE value="Made builders build." />
     <MESSAGE value="Fixed broken condition again..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed broken condition again..." />
+    <MESSAGE value="Implemented ferry deposits to extension and spawn." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented ferry deposits to extension and spawn." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -741,8 +748,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ferry.role.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="42" column="66" lean-forward="true" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
+        <state relative-caret-position="314">
+          <caret line="53" column="68" lean-forward="true" selection-start-line="53" selection-start-column="68" selection-end-line="53" selection-end-column="68" />
           <folding />
         </state>
       </provider>

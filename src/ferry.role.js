@@ -58,7 +58,7 @@ module.exports = {
 
         if (targets.length <= 0) return;
 
-        if (creep.deposit(targets[0], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
+        if (creep.transfer(targets[0], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
             creep.moveTo(targets[0], {visualizePathStyle: {stroke: '#ffffff'}});
             creep.say("\u{1F697}\u{1F3E0}");
         }
