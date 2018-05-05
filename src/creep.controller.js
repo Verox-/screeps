@@ -28,10 +28,10 @@ module.exports = {
         for (let i in Game.creeps) {
             let creep = Game.creeps[i];
 
-            if (creep.memory.role !== undefined)
+            if (creep.memory.role !== undefined && creepRole[creep.memory.role] !== undefined)
                 creepRole[creep.memory.role].run({creep: creep});
             else
-                console.error("Undefined creep role."); // TODO Perhaps try and resolve the role?
+                console.log("Undefined creep role " + creep.memory.role + " on creep " + creep.name + "."); // TODO Perhaps try and resolve the role?
 
             //creep.run({creep: creep});
         }
