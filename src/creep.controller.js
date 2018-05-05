@@ -1,5 +1,5 @@
 var creepRole = {
-    worker: require('worker.role'),
+    //worker: require('worker.role'), // Depreciated
     miner: require('miner.role'),
     ferry: require('ferry.role'),
     constructor: require('constructor.role'),

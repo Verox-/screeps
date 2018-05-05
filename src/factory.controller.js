@@ -107,7 +107,9 @@ StructureSpawn.prototype.EnqueueSpawn = function(role) {
     this.memory.spawnQueue.push(role);
 };
 
+/**
+ * @return {boolean}
+ */
 StructureSpawn.prototype.HasQueue = function() {
-    if (this.memory.spawnQueue === undefined || this.memory.spawnQueue.length === 0)
-        return false;
+    return !(this.memory.spawnQueue === undefined || this.memory.spawnQueue.length === 0);
 };
