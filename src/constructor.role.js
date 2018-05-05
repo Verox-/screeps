@@ -26,7 +26,7 @@ module.exports = {
 
     think: function (creep) {
         if (Game.spawns['Seed'].room.controller.ticksToDowngrade < 4000) {
-            if (_.sum(creep.carry) < creep.carryCapacity)
+            if (creep.carry.energy <= 0)
                 this.collectResource(creep);
             else if(creep.upgradeController(Game.spawns['Seed'].room.controller) === ERR_NOT_IN_RANGE) {
                 creep.moveTo(Game.spawns['Seed'].room.controller, {visualizePathStyle: {stroke: '#ffffff'}});
