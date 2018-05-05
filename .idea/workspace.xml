@@ -88,8 +88,8 @@
       <file leaf-file-name="factory.controller.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/factory.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="85" column="38" lean-forward="true" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
+            <state relative-caret-position="195">
+              <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -289,14 +289,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525455977840</updated>
-      <workItem from="1525455983912" duration="40425000" />
-    </task>
-    <task id="LOCAL-00001" summary="Initial structure test">
-      <created>1525460622149</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1525460622149</updated>
+      <workItem from="1525455983912" duration="41385000" />
     </task>
     <task id="LOCAL-00002" summary="Creep capacity limit to prevent inf. creeps.">
       <created>1525461261433</created>
@@ -634,11 +627,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525535514072</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Fixed incorrect initialization of spawn queue array.">
+      <created>1525535685979</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1525535685980</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40425000" />
+    <option name="totallyTimeSpent" value="41385000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2552" y="-8" width="1936" height="1056" extended-state="6" />
@@ -679,7 +679,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="EMOJISS!" />
     <MESSAGE value="Multi role test" />
     <MESSAGE value="Fixed dumb bug" />
     <MESSAGE value="Still trying to get init working." />
@@ -704,7 +703,8 @@
     <MESSAGE value="Fixed misnamed call to transfer." />
     <MESSAGE value="Moved ferries higher in the spawn priority order." />
     <MESSAGE value="Implemented a per-spawn spawn queue." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented a per-spawn spawn queue." />
+    <MESSAGE value="Fixed incorrect initialization of spawn queue array." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed incorrect initialization of spawn queue array." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -769,8 +769,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/factory.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="85" column="38" lean-forward="true" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
+        <state relative-caret-position="195">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding />
         </state>
       </provider>

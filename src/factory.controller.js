@@ -53,9 +53,15 @@ module.exports = {
         if (spawn.memory.spawnQueue === undefined) return;
 
         let spawnQueue = spawn.memory.spawnQueue;
-        if (spawnQueue.length === 0) delete spawn.memory.spawnQueue;
+        if (spawnQueue.length === 0)
+        {
+            delete spawn.memory.spawnQueue;
+            return;
+        }
 
-        let spawnRole = spawnQueue.shift()
+        if (spawn.room.energyAvailable < 300) return;
+
+        let spawnRole = spawnQueue.shift();
         this.spawnCreep(spawn, spawnRole);
 
         // return;
@@ -87,6 +93,6 @@ StructureSpawn.prototype.EnqueueSpawn = function(role) {
 };
 
 StructureSpawn.prototype.HasQueue = function() {
-    if (this.memory.spawnQueue === undefined)
+    if (this.memory.spawnQueue === undefined ||this.memory.spawnQueue.length === 0)
         return false;
 };
