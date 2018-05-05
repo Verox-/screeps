@@ -25,6 +25,9 @@ module.exports = {
     },
 
     think: function (creep) {
+        // Stop construction if we're pending a build.
+        if (Game.spawns['Seed'].HasQueue()) return;
+
         if (Game.spawns['Seed'].room.controller.ticksToDowngrade < 4000) {
             if (_.sum(creep.carry) < creep.carryCapacity && !creep.memory.working)
                 this.collectResource(creep);
@@ -41,7 +44,6 @@ module.exports = {
         else {
             this.build(creep);
         }
-
     },
 
     collectResource: function (creep) {

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="31d1bb86-9592-4319-aca5-1a030be0982b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/constructor.role.js" afterPath="$PROJECT_DIR$/src/constructor.role.js" />
       <change beforePath="$PROJECT_DIR$/src/factory.controller.js" afterPath="$PROJECT_DIR$/src/factory.controller.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -48,18 +49,18 @@
       <file leaf-file-name="ferry.role.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ferry.role.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="53" column="68" lean-forward="true" selection-start-line="53" selection-start-column="68" selection-end-line="53" selection-end-column="68" />
+            <state relative-caret-position="714">
+              <caret line="42" column="75" lean-forward="true" selection-start-line="42" selection-start-column="75" selection-end-line="42" selection-end-column="75" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="constructor.role.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="constructor.role.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/constructor.role.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+            <state relative-caret-position="263">
+              <caret line="30" column="74" lean-forward="true" selection-start-line="30" selection-start-column="74" selection-end-line="30" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -85,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="factory.controller.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="factory.controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/factory.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="399">
+              <caret line="85" column="38" lean-forward="true" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -120,9 +121,9 @@
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/creep.controller.js" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_4.txt" />
-        <option value="$PROJECT_DIR$/src/constructor.role.js" />
         <option value="$PROJECT_DIR$/src/ferry.role.js" />
         <option value="$PROJECT_DIR$/src/factory.controller.js" />
+        <option value="$PROJECT_DIR$/src/constructor.role.js" />
       </list>
     </option>
   </component>
@@ -289,7 +290,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525455977840</updated>
-      <workItem from="1525455983912" duration="37330000" />
+      <workItem from="1525455983912" duration="40246000" />
     </task>
     <task id="LOCAL-00001" summary="Initial structure test">
       <created>1525460622149</created>
@@ -620,11 +621,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525530228070</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Moved ferries higher in the spawn priority order.">
+      <created>1525532554873</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1525532554873</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37330000" />
+    <option name="totallyTimeSpent" value="40246000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2552" y="-8" width="1936" height="1056" extended-state="6" />
@@ -665,7 +673,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Upped creep capacity." />
     <MESSAGE value="Emojis test again." />
     <MESSAGE value="EMOJISS!" />
     <MESSAGE value="Multi role test" />
@@ -690,7 +697,8 @@
     <MESSAGE value="Fixed broken condition again..." />
     <MESSAGE value="Implemented ferry deposits to extension and spawn." />
     <MESSAGE value="Fixed misnamed call to transfer." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed misnamed call to transfer." />
+    <MESSAGE value="Moved ferries higher in the spawn priority order." />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved ferries higher in the spawn priority order." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -713,14 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/miner.role.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="28" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/worker.role.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -729,18 +729,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/constructor.role.js">
+    <entry file="file://$PROJECT_DIR$/src/factory.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ferry.role.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="68" lean-forward="true" selection-start-line="53" selection-start-column="68" selection-end-line="53" selection-end-column="68" />
+        <state relative-caret-position="399">
+          <caret line="85" column="38" lean-forward="true" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -753,10 +745,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/factory.controller.js">
+    <entry file="file://$PROJECT_DIR$/src/miner.role.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="561">
+          <caret line="33" column="28" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ferry.role.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="75" lean-forward="true" selection-start-line="42" selection-start-column="75" selection-end-line="42" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/constructor.role.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="30" column="74" lean-forward="true" selection-start-line="30" selection-start-column="74" selection-end-line="30" selection-end-column="74" />
           <folding />
         </state>
       </provider>

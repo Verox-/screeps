@@ -26,19 +26,40 @@ module.exports = {
 
     processTick: function () {
         for (let i in Game.spawns) {
-            let spawn = Game.spawns[i];
+            // Only evaluate the requirements every 50th tick.
+            if (Game.time % 50) this.evaluateRequirements(Game.spawns[i]);
 
-            if (spawn.spawning || Object.keys(Game.creeps).length >= Memory.creepCapacity) return;
-
-            if (_.filter(Game.creeps, (creep) => creep.memory.role === 'miner').length < Memory.minerCapacity)
-                this.spawnCreep(spawn, "miner");
-
-            else if (_.filter(Game.creeps, (creep) => creep.memory.role === 'ferry').length < Memory.ferryCapacity)
-                this.spawnCreep(spawn, "ferry");
-
-            else if (_.filter(Game.creeps, (creep) => creep.memory.role === 'constructor').length < Memory.constructorCapacity)
-                this.spawnCreep(spawn, "constructor");
+            // Process this spawn's SQ.
+            this.processSpawnQueue(Game.spawns[i]);
         }
+    },
+
+    // Evaluates the requirements for this room to function.
+    evaluateRequirements: function (spawn) {
+        if (_.filter(Game.creeps, (creep) => creep.memory.role === 'miner').length < Memory.minerCapacity)
+            spawn.EnqueueSpawn("miner");
+
+        else if (_.filter(Game.creeps, (creep) => creep.memory.role === 'ferry').length < Memory.ferryCapacity)
+            spawn.EnqueueSpawn("ferry");
+
+        else if (_.filter(Game.creeps, (creep) => creep.memory.role === 'constructor').length < Memory.constructorCapacity)
+            spawn.EnqueueSpawn("constructor");
+    },
+
+    processSpawnQueue: function(spawn) {
+        // Loop the spawns
+        if (spawn.spawning || Object.keys(Game.creeps).length >= Memory.creepCapacity) return;
+
+        if (spawn.memory.spawnQueue === undefined) return;
+
+        let spawnQueue = spawn.memory.spawnQueue;
+        if (spawnQueue.length === 0) delete spawn.memory.spawnQueue;
+
+        let spawnRole = spawnQueue.shift()
+        this.spawnCreep(spawn, spawnRole);
+
+        // return;
+
     },
 
     spawnCreep: function (spawn, role) {
@@ -56,4 +77,16 @@ module.exports = {
                 break;
         }
     }
+};
+
+StructureSpawn.prototype.EnqueueSpawn = function(role) {
+    if (this.memory.spawnQueue === undefined)
+        this.memory.spawnQueue = [];
+
+    this.memory.spawnQueue.push(role);
+};
+
+StructureSpawn.prototype.HasQueue = function() {
+    if (this.memory.spawnQueue === undefined)
+        return false;
 };
