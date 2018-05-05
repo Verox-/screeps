@@ -41,9 +41,15 @@ module.exports = {
         let liveMiners = _.filter(Game.creeps, (creep) => creep.memory.role === 'miner').length;
         let liveFerries = _.filter(Game.creeps, (creep) => creep.memory.role === 'ferry').length;
         let liveConstructors = _.filter(Game.creeps, (creep) => creep.memory.role === 'constructor').length;
-        let queuedMiners = spawn.memory.spawnQueue.filter(function(item){ return item === "miner"; }).length;
-        let queuedFerries = spawn.memory.spawnQueue.filter(function(item){ return item === "ferry"; }).length;
-        let queuedConstructors = spawn.memory.spawnQueue.filter(function(item){ return item === "constructor"; }).length
+        let queuedMiners = 0;
+        let queuedFerries = 0;
+        let queuedConstructors = 0;
+
+        if (spawn.memory.spawnQueue === undefined) {
+        queuedMiners = spawn.memory.spawnQueue.filter(function(item){ return item === "miner"; }).length;
+        queuedFerries = spawn.memory.spawnQueue.filter(function(item){ return item === "ferry"; }).length;
+        queuedConstructors = spawn.memory.spawnQueue.filter(function(item){ return item === "constructor"; }).length;
+        }
 
         if ((liveMiners + queuedMiners) < Memory.minerCapacity)
             spawn.EnqueueSpawn("miner");
