@@ -25,27 +25,43 @@ module.exports = {
     },
 
     think: function (creep) {
-        let resource = creep.pos.findClosestByRange(FIND_DROPPED_RESOURCES);
 
         if(_.sum(creep.carry) < creep.carryCapacity) {
-            if (resource === null) return;
-
-            let pickupResult = creep.pickup(resource);
-            if(pickupResult === ERR_NOT_IN_RANGE) {
-                creep.moveTo(resource, {visualizePathStyle: {stroke: '#ffffff'}});
-                creep.say("\u{1F697}\u{26A1}");
-            }
-            else {
-                creep.say(pickupResult);
-            }
-        }
-        else if (creep.transfer(Game.spawns['Seed'], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
-            creep.moveTo(Game.spawns['Seed'], {visualizePathStyle: {stroke: '#ffffff'}});
-            creep.say("\u{1F697}\u{1F3E0}");
+            this.collect(creep);
         }
         else {
-            creep.say("???");
+            this.deposit(creep);
         }
     },
+
+    collect: function (creep) {
+        let resource = creep.pos.findClosestByRange(FIND_DROPPED_RESOURCES);
+        if (resource === null) return;
+
+        let pickupResult = creep.pickup(resource);
+        if(pickupResult === ERR_NOT_IN_RANGE) {
+            creep.moveTo(resource, {visualizePathStyle: {stroke: '#ffffff'}});
+            creep.say("\u{1F697}\u{26A1}");
+        }
+        else {
+            creep.say(pickupResult);
+        }
+    },
+
+    deposit: function (creep) {
+        var targets = creep.room.find(FIND_STRUCTURES, {
+            filter: (structure) => {
+                return (structure.structureType === STRUCTURE_EXTENSION || structure.structureType === STRUCTURE_SPAWN) &&
+                    structure.energy < structure.energyCapacity;
+            }
+        });
+
+        if (targets.length <= 0) return;
+
+        if (creep.deposit(targets[0], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
+            creep.moveTo(targets[0], {visualizePathStyle: {stroke: '#ffffff'}});
+            creep.say("\u{1F697}\u{1F3E0}");
+        }
+    }
 
 };
