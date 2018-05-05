@@ -25,13 +25,16 @@ module.exports = {
     },
 
     think: function (creep) {
-        let resources = creep.pos.findClosestByRange(FIND_DROPPED_RESOURCES);
+        let resource = creep.pos.findClosestByRange(FIND_DROPPED_RESOURCES);
 
         if(_.sum(creep.carry) <= creep.carryCapacity) {
-            let pickupResult = creep.pickup(resources[0]);
+            let pickupResult = creep.pickup(resource);
             if(pickupResult === ERR_NOT_IN_RANGE) {
-                creep.moveTo(resources[0],{visualizePathStyle: {stroke: '#ffffff'}});
+                creep.moveTo(resource,{visualizePathStyle: {stroke: '#ffffff'}});
                 creep.say("\u{1F697}\u{26A1}");
+            }
+            else {
+                creep.say(pickupResult);
             }
         }
         else if (Game.spawns['Seed'].energy >= Game.spawns['Seed'].energyCapacity) {
@@ -43,6 +46,9 @@ module.exports = {
         else if (creep.transfer(Game.spawns['Seed'], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
             creep.moveTo(Game.spawns['Seed'], {visualizePathStyle: {stroke: '#ffffff'}});
             creep.say("\u{1F697}\u{1F3E0}");
+        }
+        else {
+            creep.say("???");
         }
     },
 
