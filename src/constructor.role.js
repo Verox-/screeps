@@ -26,15 +26,16 @@ module.exports = {
 
     think: function (creep) {
         if (Game.spawns['Seed'].room.controller.ticksToDowngrade < 4000) {
-            if (_.sum(creep.carry) <= creep.carryCapacity && !creep.memory.working)
+            if (_.sum(creep.carry) < creep.carryCapacity && !creep.memory.working)
                 this.collectResource(creep);
             else if(creep.upgradeController(Game.spawns['Seed'].room.controller) === ERR_NOT_IN_RANGE) {
                 creep.moveTo(Game.spawns['Seed'].room.controller, {visualizePathStyle: {stroke: '#ffffff'}});
-                creep.say("MU");
+                creep.say("\u{1F53A}");
                 creep.memory.working = true;
             }
             else if (creep.carry.energy === 0) {
                 creep.memory.working = false;
+                creep.say("\u{1F37D}");
             }
         }
         else {

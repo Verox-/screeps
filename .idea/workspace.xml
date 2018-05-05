@@ -4,7 +4,6 @@
     <list default="true" id="31d1bb86-9592-4319-aca5-1a030be0982b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/constructor.role.js" afterPath="$PROJECT_DIR$/src/constructor.role.js" />
-      <change beforePath="$PROJECT_DIR$/src/worker.role.js" afterPath="$PROJECT_DIR$/src/worker.role.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,8 +58,8 @@
       <file leaf-file-name="constructor.role.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/constructor.role.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+            <state relative-caret-position="382">
+              <caret line="40" column="14" lean-forward="true" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -290,7 +289,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525455977840</updated>
-      <workItem from="1525455983912" duration="34336000" />
+      <workItem from="1525455983912" duration="34593000" />
     </task>
     <task id="LOCAL-00001" summary="Initial structure test">
       <created>1525460622149</created>
@@ -593,11 +592,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525528685461</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Made builders build.">
+      <created>1525528982993</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1525528982993</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34336000" />
+    <option name="totallyTimeSpent" value="34593000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2552" y="-8" width="1936" height="1056" extended-state="6" />
@@ -638,7 +644,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Trying emojii again." />
     <MESSAGE value="Still trying to cure ADD." />
     <MESSAGE value="Still trying to cure stupidity." />
     <MESSAGE value="Preventing greedy creeps." />
@@ -663,7 +668,8 @@
     <MESSAGE value="Constructors now upgrade the controller." />
     <MESSAGE value="Constructors only collect when empty." />
     <MESSAGE value="Tried to solve creep ADHD" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tried to solve creep ADHD" />
+    <MESSAGE value="Made builders build." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made builders build." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -728,8 +734,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/constructor.role.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+        <state relative-caret-position="382">
+          <caret line="40" column="14" lean-forward="true" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
           <folding />
         </state>
       </provider>
