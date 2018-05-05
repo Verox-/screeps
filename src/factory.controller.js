@@ -15,8 +15,11 @@ module.exports = {
 
     initMemory: function () {
         Memory.creepCapacity = 8;
-        Memory.minerCapacity = 4;
-        Memory.builderCapacity = 4;
+        Memory.minerCapacity = 1;
+        Memory.ferryCapacity = 2;
+        Memory.constructorCapacity = 1;
+
+        Memory.constructQueue = {};
 
         Memory.factoryIsInitialized = true;
     },
@@ -30,13 +33,27 @@ module.exports = {
             if (_.filter(Game.creeps, (creep) => creep.memory.role === 'miner').length < Memory.minerCapacity)
                 this.spawnCreep(spawn, "miner");
 
-            else if (_.filter(Game.creeps, (creep) => creep.memory.role === 'builder').length < Memory.builderCapacity)
-                this.spawnCreep(spawn, "builder");
+            else if (_.filter(Game.creeps, (creep) => creep.memory.role === 'constructor').length < Memory.constructorCapacity)
+                this.spawnCreep(spawn, "constructor");
+
+            else if (_.filter(Game.creeps, (creep) => creep.memory.role === 'ferry').length < Memory.ferryCapacity)
+                this.spawnCreep(spawn, "ferry");
         }
     },
 
     spawnCreep: function (spawn, role) {
         let name = Math.random().toString(36).substring(7);
-        spawn.createCreep([WORK, MOVE, CARRY], name, {role: role});
+
+        switch (role) {
+            case "ferry":
+                spawn.createCreep([CARRY, CARRY, CARRY, CARRY, MOVE, MOVE], name, {role: role});
+                break;
+            case "miner":
+                spawn.createCreep([WORK, WORK, CARRY, MOVE], name, {role: role});
+                break;
+            case "constructor":
+                spawn.createCreep([WORK, CARRY, CARRY, MOVE, MOVE], name, {role: role});
+                break;
+        }
     }
 };

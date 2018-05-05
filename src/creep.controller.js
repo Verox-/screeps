@@ -1,3 +1,10 @@
+var creepRole = {
+    worker: require('worker.role'),
+    miner: require('miner.role'),
+    ferry: require('ferry.role'),
+    constructor: require('constructor.role'),
+};
+
 module.exports = {
 
     init: function () {
@@ -16,10 +23,15 @@ module.exports = {
     },
 
     processTick: function () {
-        for (var i in Game.creeps) {
-            var creep = Game.creeps[i];
+        for (let i in Game.creeps) {
+            let creep = Game.creeps[i];
 
-            creep.run({creep: creep});
+            if (creep.memory.role !== undefined)
+                creepRole[creep.memory.role].run({creep: creep});
+            else
+                console.error("Undefined creep role."); // TODO Perhaps try and resolve the role?
+
+            //creep.run({creep: creep});
         }
     }
 

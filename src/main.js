@@ -1,4 +1,3 @@
-var roleWorker = require('worker.role');
 var factoryC = require('factory.controller');
 var creepC = require('creep.controller');
 
@@ -7,10 +6,9 @@ creepC.init();
 
 module.exports.loop = function () {
 
+    // Think the factories
     factoryC.run();
 
-    for(var name in Game.creeps) {
-        var creep = Game.creeps[name];
-        roleWorker.run({creep: creep});
-    }
-}
+    // Think the creeps
+    creepC.run();
+};

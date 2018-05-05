@@ -44,7 +44,13 @@ module.exports = {
         {
             creep.memory.eating = false;
         }
-        if(creep.carry.energy <= 0 || creep.memory.eating) {
+        if (Game.spawns['Seed'].room.controller.ticksToDowngrade < 1000 && creep.carry.energy > 45) {
+            if(creep.upgradeController(Game.spawns['Seed'].room.controller) === ERR_NOT_IN_RANGE) {
+                creep.moveTo(Game.spawns['Seed'].room.controller, {visualizePathStyle: {stroke: '#ffffff'}});
+                creep.say("MU");
+            }
+        }
+        else if(creep.carry.energy <= 0 || creep.memory.eating) {
             var sources = creep.room.find(FIND_SOURCES);
             var harvestResult = creep.harvest(sources[0]);
             if(harvestResult === ERR_NOT_IN_RANGE) {
@@ -76,13 +82,15 @@ module.exports = {
     },
 
     thinkBuilder: function (creep) {
+        if (_.filter(Game.creeps, (creep) => creep.memory.role === 'miner').length < Memory.minerCapacity) return;
+
         if(creep.memory.building && creep.carry.energy === 0) {
             creep.memory.building = false;
-            creep.say('🔄');
+            creep.say('ð');
         }
         if(!creep.memory.building && creep.carry.energy === creep.carryCapacity) {
             creep.memory.building = true;
-            creep.say('🚧');
+            creep.say('\u{1F528}');
         }
 
         if(creep.memory.building) {
@@ -97,6 +105,9 @@ module.exports = {
             var sources = creep.room.find(FIND_MY_STRUCTURES, {
                 filter: { structureType: STRUCTURE_SPAWN }
             });
+
+            if (sources[0].energy < 100) return;
+
             if(creep.withdraw(sources[0], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
                 creep.moveTo(sources[0], {visualizePathStyle: {stroke: '#ffaa00'}});
             }
