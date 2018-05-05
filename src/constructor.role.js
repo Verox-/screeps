@@ -38,7 +38,7 @@ module.exports = {
             }
         }
         else {
-            creep.say("\u{1F634}");
+            this.build(creep);
         }
 
     },
@@ -47,6 +47,41 @@ module.exports = {
         if(creep.withdraw(Game.spawns['Seed'], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
             creep.moveTo(Game.spawns['Seed'], {visualizePathStyle: {stroke: '#ffffff'}});
             creep.say("MU");
+        }
+    },
+
+    build: function (creep) {
+        // Halts all construction if a miner is required.
+        if (_.filter(Game.creeps, (creep) => creep.memory.role === 'miner').length < Memory.minerCapacity) return;
+
+
+        if(creep.memory.working && creep.carry.energy === 0) {
+            creep.memory.working = false;
+            creep.say('ð');
+        }
+        if(!creep.memory.working && creep.carry.energy === creep.carryCapacity) {
+            creep.memory.working = true;
+            creep.say('\u{1F528}');
+        }
+
+        if(creep.memory.working) {
+            let targets = creep.room.find(FIND_CONSTRUCTION_SITES);
+            if(targets.length) {
+                if(creep.build(targets[0]) === ERR_NOT_IN_RANGE) {
+                    creep.moveTo(targets[0], {visualizePathStyle: {stroke: '#ffffff'}});
+                }
+            }
+        }
+        else {
+            let sources = creep.room.find(FIND_MY_STRUCTURES, {
+                filter: { structureType: STRUCTURE_SPAWN }
+            });
+
+            if (sources[0].energy < 100) return;
+
+            if(creep.withdraw(sources[0], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
+                creep.moveTo(sources[0], {visualizePathStyle: {stroke: '#ffaa00'}});
+            }
         }
     }
 

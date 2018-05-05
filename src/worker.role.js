@@ -84,16 +84,16 @@ module.exports = {
     thinkBuilder: function (creep) {
         if (_.filter(Game.creeps, (creep) => creep.memory.role === 'miner').length < Memory.minerCapacity) return;
 
-        if(creep.memory.building && creep.carry.energy === 0) {
-            creep.memory.building = false;
+        if(creep.memory.working && creep.carry.energy === 0) {
+            creep.memory.working = false;
             creep.say('ð');
         }
-        if(!creep.memory.building && creep.carry.energy === creep.carryCapacity) {
-            creep.memory.building = true;
+        if(!creep.memory.working && creep.carry.energy === creep.carryCapacity) {
+            creep.memory.working = true;
             creep.say('\u{1F528}');
         }
 
-        if(creep.memory.building) {
+        if(creep.memory.working) {
             var targets = creep.room.find(FIND_CONSTRUCTION_SITES);
             if(targets.length) {
                 if(creep.build(targets[0]) === ERR_NOT_IN_RANGE) {
