@@ -36,13 +36,22 @@ module.exports = {
 
     // Evaluates the requirements for this room to function.
     evaluateRequirements: function (spawn) {
-        if (_.filter(Game.creeps, (creep) => creep.memory.role === 'miner').length < Memory.minerCapacity)
+
+        // THIS IS RETARDED
+        let liveMiners = _.filter(Game.creeps, (creep) => creep.memory.role === 'miner').length;
+        let liveFerries = _.filter(Game.creeps, (creep) => creep.memory.role === 'ferry').length;
+        let liveConstructors = _.filter(Game.creeps, (creep) => creep.memory.role === 'constructor').length;
+        let queuedMiners = spawn.memory.spawnQueue.toString().match(/miner/g).length;
+        let queuedFerries = spawn.memory.spawnQueue.toString().match(/ferry/g).length;
+        let queuedConstructors = spawn.memory.spawnQueue.toString().match(/constructor/g).length;
+
+        if ((liveMiners + queuedMiners) < Memory.minerCapacity)
             spawn.EnqueueSpawn("miner");
 
-        else if (_.filter(Game.creeps, (creep) => creep.memory.role === 'ferry').length < Memory.ferryCapacity)
+        else if ((liveFerries + queuedFerries) < Memory.ferryCapacity)
             spawn.EnqueueSpawn("ferry");
 
-        else if (_.filter(Game.creeps, (creep) => creep.memory.role === 'constructor').length < Memory.constructorCapacity)
+        else if ((liveConstructors + queuedConstructors) < Memory.constructorCapacity)
             spawn.EnqueueSpawn("constructor");
     },
 
@@ -93,6 +102,6 @@ StructureSpawn.prototype.EnqueueSpawn = function(role) {
 };
 
 StructureSpawn.prototype.HasQueue = function() {
-    if (this.memory.spawnQueue === undefined ||this.memory.spawnQueue.length === 0)
+    if (this.memory.spawnQueue === undefined || this.memory.spawnQueue.length === 0)
         return false;
 };
