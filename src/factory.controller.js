@@ -80,7 +80,7 @@ module.exports = {
 };
 
 StructureSpawn.prototype.EnqueueSpawn = function(role) {
-    if (this.memory.spawnQueue === undefined)
+    if (!Array.isArray(this.memory.spawnQueue))
         this.memory.spawnQueue = [];
 
     this.memory.spawnQueue.push(role);
