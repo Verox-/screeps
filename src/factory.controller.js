@@ -19,7 +19,7 @@ module.exports = {
         Memory.ferryCapacity = 2;
         Memory.constructorCapacity = 1;
 
-        Memory.constructQueue = {};
+        Memory.factories = {};
 
         Memory.factoryIsInitialized = true;
     },
@@ -33,11 +33,11 @@ module.exports = {
             if (_.filter(Game.creeps, (creep) => creep.memory.role === 'miner').length < Memory.minerCapacity)
                 this.spawnCreep(spawn, "miner");
 
-            else if (_.filter(Game.creeps, (creep) => creep.memory.role === 'constructor').length < Memory.constructorCapacity)
-                this.spawnCreep(spawn, "constructor");
-
             else if (_.filter(Game.creeps, (creep) => creep.memory.role === 'ferry').length < Memory.ferryCapacity)
                 this.spawnCreep(spawn, "ferry");
+
+            else if (_.filter(Game.creeps, (creep) => creep.memory.role === 'constructor').length < Memory.constructorCapacity)
+                this.spawnCreep(spawn, "constructor");
         }
     },
 
