@@ -37,13 +37,13 @@ module.exports = {
     // Evaluates the requirements for this room to function.
     evaluateRequirements: function (spawn) {
 
-        // THIS IS RETARDED
+        // THIS IS RIDICULOUS
         let liveMiners = _.filter(Game.creeps, (creep) => creep.memory.role === 'miner').length;
         let liveFerries = _.filter(Game.creeps, (creep) => creep.memory.role === 'ferry').length;
         let liveConstructors = _.filter(Game.creeps, (creep) => creep.memory.role === 'constructor').length;
-        let queuedMiners = spawn.memory.spawnQueue.toString().match(/miner/g).length;
-        let queuedFerries = spawn.memory.spawnQueue.toString().match(/ferry/g).length;
-        let queuedConstructors = spawn.memory.spawnQueue.toString().match(/constructor/g).length;
+        let queuedMiners = spawn.memory.spawnQueue.filter(function(item){ return item === "miner"; }).length;
+        let queuedFerries = spawn.memory.spawnQueue.filter(function(item){ return item === "ferry"; }).length;
+        let queuedConstructors = spawn.memory.spawnQueue.filter(function(item){ return item === "constructor"; }).length
 
         if ((liveMiners + queuedMiners) < Memory.minerCapacity)
             spawn.EnqueueSpawn("miner");

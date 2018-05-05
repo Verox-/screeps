@@ -88,8 +88,8 @@
       <file leaf-file-name="factory.controller.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/factory.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="263">
+              <caret line="45" column="108" lean-forward="false" selection-start-line="45" selection-start-column="108" selection-end-line="45" selection-end-column="108" />
               <folding />
             </state>
           </provider>
@@ -289,14 +289,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525455977840</updated>
-      <workItem from="1525455983912" duration="42280000" />
-    </task>
-    <task id="LOCAL-00003" summary="Fixed creep capacity to actually use creeps not spawns.">
-      <created>1525461638565</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1525461638565</updated>
+      <workItem from="1525455983912" duration="42404000" />
     </task>
     <task id="LOCAL-00004" summary="Game.creeps.length === undefined. Workaround for that.">
       <created>1525461939580</created>
@@ -634,11 +627,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525536651299</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Spawn considers queue before enqueueing another creep.">
+      <created>1525537564922</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1525537564922</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42280000" />
+    <option name="totallyTimeSpent" value="42404000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2552" y="-8" width="1936" height="1056" extended-state="6" />
@@ -679,7 +679,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed dumb bug" />
     <MESSAGE value="Still trying to get init working." />
     <MESSAGE value="Removed init" />
     <MESSAGE value="Switched worker and builder." />
@@ -704,7 +703,8 @@
     <MESSAGE value="Implemented a per-spawn spawn queue." />
     <MESSAGE value="Fixed incorrect initialization of spawn queue array." />
     <MESSAGE value="Spawn now waits until there is enough energy available before trying to spawn the creep." />
-    <option name="LAST_COMMIT_MESSAGE" value="Spawn now waits until there is enough energy available before trying to spawn the creep." />
+    <MESSAGE value="Spawn considers queue before enqueueing another creep." />
+    <option name="LAST_COMMIT_MESSAGE" value="Spawn considers queue before enqueueing another creep." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -769,8 +769,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/factory.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="263">
+          <caret line="45" column="108" lean-forward="false" selection-start-line="45" selection-start-column="108" selection-end-line="45" selection-end-column="108" />
           <folding />
         </state>
       </provider>
