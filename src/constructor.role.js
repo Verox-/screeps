@@ -28,18 +28,9 @@ module.exports = {
         // Stop construction if we're pending a build.
         if (Game.spawns['Seed'].HasQueue()) return;
 
+        // Override the constructor's task list and upgrade the controller if it's low..
         if (Game.spawns['Seed'].room.controller.ticksToDowngrade < 4000) {
-            if (_.sum(creep.carry) < creep.carryCapacity && !creep.memory.working)
-                this.collectResource(creep);
-            else if(creep.upgradeController(Game.spawns['Seed'].room.controller) === ERR_NOT_IN_RANGE) {
-                creep.moveTo(Game.spawns['Seed'].room.controller, {visualizePathStyle: {stroke: '#ffffff'}});
-                creep.say("\u{1F53A}");
-                creep.memory.working = true;
-            }
-            else if (creep.carry.energy === 0) {
-                creep.memory.working = false;
-                creep.say("\u{1F37D}");
-            }
+            this.upgrade(creep);
         }
         else {
             this.build(creep);
@@ -50,6 +41,20 @@ module.exports = {
         if(creep.withdraw(Game.spawns['Seed'], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
             creep.moveTo(Game.spawns['Seed'], {visualizePathStyle: {stroke: '#ffffff'}});
             creep.say("MU");
+        }
+    },
+
+    upgrade: function (creep) {
+        if (_.sum(creep.carry) < creep.carryCapacity && !creep.memory.working)
+            this.collectResource(creep);
+        else if(creep.upgradeController(Game.spawns['Seed'].room.controller) === ERR_NOT_IN_RANGE) {
+            creep.moveTo(Game.spawns['Seed'].room.controller, {visualizePathStyle: {stroke: '#ffffff'}});
+            creep.say("\u{1F53A}");
+            creep.memory.working = true;
+        }
+        else if (creep.carry.energy === 0) {
+            creep.memory.working = false;
+            creep.say("\u{1F37D}");
         }
     },
 
@@ -73,6 +78,9 @@ module.exports = {
                 if(creep.build(targets[0]) === ERR_NOT_IN_RANGE) {
                     creep.moveTo(targets[0], {visualizePathStyle: {stroke: '#ffffff'}});
                 }
+            }
+            else {
+                this.upgrade(creep);
             }
         }
         else {
