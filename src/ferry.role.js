@@ -39,12 +39,6 @@ module.exports = {
                 creep.say(pickupResult);
             }
         }
-        else if (Game.spawns['Seed'].energy >= Game.spawns['Seed'].energyCapacity) {
-            if(creep.upgradeController(Game.spawns['Seed'].room.controller) === ERR_NOT_IN_RANGE) {
-                creep.moveTo(Game.spawns['Seed'].room.controller, {visualizePathStyle: {stroke: '#ffffff'}});
-                creep.say("MU");
-            }
-        }
         else if (creep.transfer(Game.spawns['Seed'], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
             creep.moveTo(Game.spawns['Seed'], {visualizePathStyle: {stroke: '#ffffff'}});
             creep.say("\u{1F697}\u{1F3E0}");

@@ -25,11 +25,25 @@ module.exports = {
     },
 
     think: function (creep) {
-        creep.say("\u{1F634}");
+        if (Game.spawns['Seed'].room.controller.ticksToDowngrade < 4000) {
+            if (_.sum(creep.carry) < creep.carryCapacity)
+                this.collectResource(creep);
+            else if(creep.upgradeController(Game.spawns['Seed'].room.controller) === ERR_NOT_IN_RANGE) {
+                creep.moveTo(Game.spawns['Seed'].room.controller, {visualizePathStyle: {stroke: '#ffffff'}});
+                creep.say("MU");
+            }
+        }
+        else {
+            creep.say("\u{1F634}");
+        }
+
     },
 
     collectResource: function (creep) {
-
-    },
+        if(creep.withdraw(Game.spawns['Seed'], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
+            creep.moveTo(Game.spawns['Seed'], {visualizePathStyle: {stroke: '#ffffff'}});
+            creep.say("MU");
+        }
+    }
 
 };
