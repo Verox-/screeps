@@ -15,6 +15,8 @@ module.exports = {
     },
 
     run: function () {
+        if (Memory.thinking === false) return;
+
         this.processTick();
     },
 
