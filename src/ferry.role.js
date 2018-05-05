@@ -27,7 +27,7 @@ module.exports = {
     think: function (creep) {
         let resources = creep.pos.findClosestByRange(FIND_DROPPED_RESOURCES);
 
-        if(_.sum(creep.carry) <= creep.carryCapacity && resources.length > 0) {
+        if(_.sum(creep.carry) <= creep.carryCapacity) {
             let pickupResult = creep.pickup(resources[0]);
             if(pickupResult === ERR_NOT_IN_RANGE) {
                 creep.moveTo(resources[0],{visualizePathStyle: {stroke: '#ffffff'}});
