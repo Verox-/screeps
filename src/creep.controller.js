@@ -35,6 +35,9 @@ module.exports = {
 
             //creep.run({creep: creep});
         }
-    }
+    },
 
+    getRoleConfig: function (role) {
+        return creepRole[role].config;
+    },
 };

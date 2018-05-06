@@ -59,10 +59,6 @@ module.exports = {
     },
 
     build: function (creep) {
-        // Halts all construction if a miner is required.
-        if (_.filter(Game.creeps, (creep) => creep.memory.role === 'miner').length < Memory.minerCapacity) return;
-
-
         if(creep.memory.working && creep.carry.energy === 0) {
             creep.memory.working = false;
             creep.say('ð');
@@ -84,6 +80,9 @@ module.exports = {
             }
         }
         else {
+            // Halts all construction if a miner is required.
+            if (_.filter(Game.creeps, (creep) => creep.memory.role === 'miner').length < Memory.minerCapacity) return;
+
             let sources = creep.room.find(FIND_MY_STRUCTURES, {
                 filter: { structureType: STRUCTURE_SPAWN }
             });

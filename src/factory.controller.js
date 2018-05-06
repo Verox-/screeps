@@ -1,3 +1,5 @@
+var creepC = require("creep.controller");
+
 module.exports = {
 
     init: function () {
@@ -97,6 +99,10 @@ module.exports = {
                 spawn.createCreep([WORK, CARRY, CARRY, MOVE, MOVE], name, {role: role});
                 break;
         }
+    },
+
+    calculateRoleParts: function (role) {
+        var config = this.getRoleConfig(role)
     }
 };
 
