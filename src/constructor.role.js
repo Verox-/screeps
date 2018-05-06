@@ -38,6 +38,9 @@ module.exports = {
     },
 
     collectResource: function (creep) {
+        // Stop collection if we're pending a build.
+        if (Game.spawns['Seed'].HasQueue()) return;
+
         if(creep.withdraw(Game.spawns['Seed'], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
             creep.moveTo(Game.spawns['Seed'], {visualizePathStyle: {stroke: '#ffffff'}});
             creep.say("MU");
@@ -80,9 +83,6 @@ module.exports = {
             }
         }
         else {
-            // Halts all construction if a miner is required.
-            if (_.filter(Game.creeps, (creep) => creep.memory.role === 'miner').length < Memory.minerCapacity) return;
-
             let sources = creep.room.find(FIND_MY_STRUCTURES, {
                 filter: { structureType: STRUCTURE_SPAWN }
             });
