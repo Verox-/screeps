@@ -26,7 +26,7 @@ module.exports = {
 
     think: function (creep) {
 
-        if (!this.collect(creep))
+        if (this.collect(creep))
             this.deposit(creep);
 
     },
