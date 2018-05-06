@@ -29,6 +29,9 @@ module.exports = {
         }
 
         this.mine(creep);
+
+        if (creep.memory.targetContainer !== undefined)
+            this.repairContainer(creep);
     },
 
     mine: function (creep) {
@@ -63,7 +66,17 @@ module.exports = {
 
         // Rescan for a supply container every 100 ticks.
         if (Game.time % 100 && creep.memory.targetContainer === false)
+        {
             delete creep.memory.targetContainer;
+            this.findContainer(creep);
+        }
+
+    },
+
+    repairContainer: function (creep) {
+        let container = Game.getObjectById(creep.memory.targetContainer);
+        if (container.hits < container.hitsMax )
+            creep.repair(container)
     },
 
     findContainer: function (creep) {
