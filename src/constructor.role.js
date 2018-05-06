@@ -25,9 +25,6 @@ module.exports = {
     },
 
     think: function (creep) {
-        // Stop construction if we're pending a build.
-        if (Game.spawns['Seed'].HasQueue()) return;
-
         // Override the constructor's task list and upgrade the controller if it's low..
         if (Game.spawns['Seed'].room.controller.ticksToDowngrade < 4000) {
             this.upgrade(creep);

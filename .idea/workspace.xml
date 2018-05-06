@@ -58,8 +58,8 @@
       <file leaf-file-name="constructor.role.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/constructor.role.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="42" column="8" lean-forward="false" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+            <state relative-caret-position="246">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -289,14 +289,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525455977840</updated>
-      <workItem from="1525455983912" duration="49566000" />
-    </task>
-    <task id="LOCAL-00011" summary="Visualize paths.">
-      <created>1525464217944</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1525464217944</updated>
+      <workItem from="1525455983912" duration="50183000" />
     </task>
     <task id="LOCAL-00012" summary="Woops missing bracket.">
       <created>1525464265746</created>
@@ -634,11 +627,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525607567144</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Constructors only stop if they're empty and there is a build queue.">
+      <created>1525607651071</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1525607651072</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49566000" />
+    <option name="totallyTimeSpent" value="50183000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2552" y="-8" width="1936" height="1056" extended-state="6" />
@@ -769,8 +769,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/constructor.role.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="42" column="8" lean-forward="false" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+        <state relative-caret-position="246">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
