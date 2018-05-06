@@ -28,12 +28,16 @@ module.exports = {
         for (let i in Game.creeps) {
             let creep = Game.creeps[i];
 
+            // Recall the creep's tasks.
+            creep.tasks = creep.memory.tasks;
+
             if (creep.memory.role !== undefined && creepRole[creep.memory.role] !== undefined)
                 creepRole[creep.memory.role].run({creep: creep});
             else
                 console.log("Undefined creep role " + creep.memory.role + " on creep " + creep.name + "."); // TODO Perhaps try and resolve the role?
 
-            //creep.run({creep: creep});
+            // Store the creep's tasks.
+            creep.memory.tasks = creep.tasks;
         }
     },
 
@@ -42,7 +46,7 @@ module.exports = {
     },
 };
 
-Creep.prototype.task = null;
-Creep.prototype.setTask = function (task) {
+Creep.prototype.tasks = [];
+Creep.prototype.addTask = function (task) {
     if (this.task === undefined) this.task = task;
 };

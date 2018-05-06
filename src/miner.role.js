@@ -22,6 +22,16 @@ module.exports = {
     },
 
     think: function (creep) {
+
+        if (creep.tasks.length <= 0)
+        {
+            let mineTask = new TaskHarvest();
+            creep.addTask()
+        }
+
+        resolveTask(creep.tasks[creep.tasks.length-1]).run(creep);
+
+        return;
         if (_.sum(creep.carry) >= creep.carryCapacity)
         {
             this.deposit(creep);
