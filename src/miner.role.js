@@ -86,7 +86,7 @@ module.exports = {
 
     findContainer: function (creep) {
         const containers = creep.pos.findInRange(FIND_STRUCTURES, 1, {filter: { structureType: STRUCTURE_CONTAINER }});
-        creep.memory.targetContainer = _.sum(containers) <= 0 ? false : containers[0].id;
+        creep.memory.targetContainer = containers.length <= 0 ? false : containers[0].id;
     }
 
 };

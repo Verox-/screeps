@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31d1bb86-9592-4319-aca5-1a030be0982b" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/maintainer.role.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/constructor.role.js" afterPath="$PROJECT_DIR$/src/constructor.role.js" />
-      <change beforePath="$PROJECT_DIR$/src/creep.controller.js" afterPath="$PROJECT_DIR$/src/creep.controller.js" />
       <change beforePath="$PROJECT_DIR$/src/miner.role.js" afterPath="$PROJECT_DIR$/src/miner.role.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -31,7 +28,7 @@
       <file leaf-file-name="creep.controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/creep.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
+            <state relative-caret-position="416">
               <caret line="41" column="6" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
               <folding />
             </state>
@@ -41,8 +38,8 @@
       <file leaf-file-name="miner.role.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/miner.role.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="78" column="52" lean-forward="true" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
+            <state relative-caret-position="365">
+              <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -304,14 +301,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525455977840</updated>
-      <workItem from="1525455983912" duration="53070000" />
-    </task>
-    <task id="LOCAL-00015" summary="Still trying to cure ADD.">
-      <created>1525471191077</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1525471191077</updated>
+      <workItem from="1525455983912" duration="53546000" />
     </task>
     <task id="LOCAL-00016" summary="Still trying to cure stupidity.">
       <created>1525471967666</created>
@@ -649,11 +639,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525623039262</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="How does javascript trycatch work..">
+      <created>1525623201584</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1525623201584</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53070000" />
+    <option name="totallyTimeSpent" value="53546000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2552" y="-8" width="1936" height="1056" extended-state="6" />
@@ -694,7 +691,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed ferry invalid target" />
     <MESSAGE value="Fixed ferry wrong condition" />
     <MESSAGE value="Fixed ferries getting hung up without any resource." />
     <MESSAGE value="Lets ferries wait" />
@@ -719,7 +715,8 @@
     <MESSAGE value="Removed complete stop if there's a queue." />
     <MESSAGE value="Miner will now repair it's own container if it becomes damaged." />
     <MESSAGE value="Trying trycatch." />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying trycatch." />
+    <MESSAGE value="How does javascript trycatch work.." />
+    <option name="LAST_COMMIT_MESSAGE" value="How does javascript trycatch work.." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -784,7 +781,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/creep.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
+        <state relative-caret-position="416">
           <caret line="41" column="6" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
           <folding />
         </state>
@@ -792,8 +789,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/miner.role.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="78" column="52" lean-forward="true" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
+        <state relative-caret-position="365">
+          <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
           <folding />
         </state>
       </provider>
