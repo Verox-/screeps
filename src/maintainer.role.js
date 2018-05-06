@@ -3,7 +3,7 @@ module.exports = {
     config: {
         base: [WORK, CARRY, MOVE],
         pattern: [WORK, CARRY, MOVE],
-        role: "constructor",
+        role: "maintainer",
     },
 
     init: function (creep, role, level) {
@@ -63,7 +63,7 @@ module.exports = {
         }
     },
 
-    build: function (creep) {
+    repair: function (creep) {
         if(creep.memory.working && creep.carry.energy === 0) {
             creep.memory.working = false;
             creep.say('ð');

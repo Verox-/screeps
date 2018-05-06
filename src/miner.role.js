@@ -79,7 +79,7 @@ module.exports = {
             if (container.hits < container.hitsMax )
                 creep.repair(container)
         }
-        catch {
+        catch (ex) {
 
         }
     },

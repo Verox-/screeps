@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31d1bb86-9592-4319-aca5-1a030be0982b" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/maintainer.role.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/constructor.role.js" afterPath="$PROJECT_DIR$/src/constructor.role.js" />
+      <change beforePath="$PROJECT_DIR$/src/creep.controller.js" afterPath="$PROJECT_DIR$/src/creep.controller.js" />
+      <change beforePath="$PROJECT_DIR$/src/miner.role.js" afterPath="$PROJECT_DIR$/src/miner.role.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,17 +32,17 @@
         <entry file="file://$PROJECT_DIR$/src/creep.controller.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
-              <caret line="41" column="6" lean-forward="false" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+              <caret line="41" column="6" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="miner.role.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="miner.role.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/miner.role.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="28" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+            <state relative-caret-position="399">
+              <caret line="78" column="52" lean-forward="true" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -55,11 +58,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="constructor.role.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="constructor.role.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/constructor.role.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="892">
+              <caret line="83" column="36" lean-forward="true" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="maintainer.role.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/maintainer.role.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="84" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -88,7 +101,7 @@
       <file leaf-file-name="factory.controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/factory.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="892">
+            <state relative-caret-position="178">
               <caret line="103" column="38" lean-forward="false" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="38" />
               <folding />
             </state>
@@ -101,6 +114,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -116,13 +130,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/worker.role.js" />
-        <option value="$PROJECT_DIR$/src/miner.role.js" />
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_4.txt" />
         <option value="$PROJECT_DIR$/src/ferry.role.js" />
-        <option value="$PROJECT_DIR$/src/creep.controller.js" />
         <option value="$PROJECT_DIR$/src/factory.controller.js" />
         <option value="$PROJECT_DIR$/src/constructor.role.js" />
+        <option value="$PROJECT_DIR$/src/maintainer.role.js" />
+        <option value="$PROJECT_DIR$/src/creep.controller.js" />
+        <option value="$PROJECT_DIR$/src/miner.role.js" />
       </list>
     </option>
   </component>
@@ -289,28 +304,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525455977840</updated>
-      <workItem from="1525455983912" duration="50183000" />
-    </task>
-    <task id="LOCAL-00012" summary="Woops missing bracket.">
-      <created>1525464265746</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1525464265746</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Trying emojii again.">
-      <created>1525464332037</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1525464332037</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Still trying to cure ADD.">
-      <created>1525464967466</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1525464967466</updated>
+      <workItem from="1525455983912" duration="53070000" />
     </task>
     <task id="LOCAL-00015" summary="Still trying to cure ADD.">
       <created>1525471191077</created>
@@ -634,11 +628,32 @@
       <option name="project" value="LOCAL" />
       <updated>1525607651072</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Removed complete stop if there's a queue.">
+      <created>1525608815185</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1525608815185</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Miner will now repair it's own container if it becomes damaged.">
+      <created>1525622714643</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1525622714643</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Trying trycatch.">
+      <created>1525623039262</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1525623039262</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50183000" />
+    <option name="totallyTimeSpent" value="53070000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2552" y="-8" width="1936" height="1056" extended-state="6" />
@@ -679,9 +694,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Total rework of the role system.&#10;Introduced specialized roles miner, ferry and constructor.&#10;Simplified role run() call." />
-    <MESSAGE value="Added a master stop switch." />
-    <MESSAGE value="Implemented early ferry" />
     <MESSAGE value="Fixed ferry invalid target" />
     <MESSAGE value="Fixed ferry wrong condition" />
     <MESSAGE value="Fixed ferries getting hung up without any resource." />
@@ -704,7 +716,10 @@
     <MESSAGE value="Ferry creeps will now return to base if there's nothing to ferry." />
     <MESSAGE value="Made creeps upgrade the controller if they're bored." />
     <MESSAGE value="Constructors only stop if they're empty and there is a build queue." />
-    <option name="LAST_COMMIT_MESSAGE" value="Constructors only stop if they're empty and there is a build queue." />
+    <MESSAGE value="Removed complete stop if there's a queue." />
+    <MESSAGE value="Miner will now repair it's own container if it becomes damaged." />
+    <MESSAGE value="Trying trycatch." />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying trycatch." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -743,10 +758,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/miner.role.js">
+    <entry file="file://$PROJECT_DIR$/src/constructor.role.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="28" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+        <state relative-caret-position="892">
+          <caret line="83" column="36" lean-forward="true" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/maintainer.role.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="84" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="103" column="38" lean-forward="false" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -754,23 +785,15 @@
     <entry file="file://$PROJECT_DIR$/src/creep.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="41" column="6" lean-forward="false" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+          <caret line="41" column="6" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/factory.controller.js">
+    <entry file="file://$PROJECT_DIR$/src/miner.role.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="892">
-          <caret line="103" column="38" lean-forward="false" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constructor.role.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="399">
+          <caret line="78" column="52" lean-forward="true" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
           <folding />
         </state>
       </provider>

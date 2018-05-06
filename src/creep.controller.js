@@ -41,3 +41,5 @@ module.exports = {
         return creepRole[role].config;
     },
 };
+
+Creep.prototype.task = null;
