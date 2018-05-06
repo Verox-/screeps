@@ -43,3 +43,6 @@ module.exports = {
 };
 
 Creep.prototype.task = null;
+Creep.prototype.setTask = function (task) {
+    if (this.task === undefined) this.task = task;
+};
