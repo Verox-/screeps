@@ -32,25 +32,81 @@ module.exports = {
     },
 
     collect: function (creep) {
+
+        if (!this.collectDropped(creep))
+            this.collectContainer(creep);
+
+        // if (resource === null) return false;
+        //
+        // if(_.sum(creep.carry) < creep.carryCapacity)
+        // {
+        //     let pickupResult = creep.pickup(resource);
+        //     if(pickupResult === ERR_NOT_IN_RANGE) {
+        //         creep.moveTo(resource, {visualizePathStyle: {stroke: '#ffffff'}});
+        //         creep.say("\u{1F697}\u{26A1}");
+        //     }
+        //     else {
+        //         creep.say(pickupResult);
+        //     }
+        //
+        //     return true;
+        // }
+        // else // The creep is full.
+        //     return false;
+
+    },
+
+    /**
+     * Finds dropped resources in this room and tries to pick them up.
+     * @param creep Reference to the creep
+     * @returns {boolean} TRUE if pick up success
+     */
+    collectDropped: function (creep) {
         let resource = creep.pos.findClosestByRange(FIND_DROPPED_RESOURCES);
         if (resource === null) return false;
 
         if(_.sum(creep.carry) < creep.carryCapacity)
         {
             let pickupResult = creep.pickup(resource);
-            if(pickupResult === ERR_NOT_IN_RANGE) {
+
+            if (pickupResult === OK)
+                return true;
+            else if(pickupResult === ERR_NOT_IN_RANGE) {
                 creep.moveTo(resource, {visualizePathStyle: {stroke: '#ffffff'}});
                 creep.say("\u{1F697}\u{26A1}");
             }
             else {
                 creep.say(pickupResult);
             }
-
-            return true;
         }
-        else // The creep is full.
-            return false;
 
+
+        return false;
+    },
+
+    collectContainer: function (creep) {
+        let resource = creep.pos.findClosestByRange(FIND_MY_STRUCTURES, {
+            filter: { structureType: STRUCTURE_CONTAINER}
+        });
+        if (resource === null) return false;
+
+        if(_.sum(creep.carry) < creep.carryCapacity)
+        {
+            let withdrawResult = creep.withdraw(resource, RESOURCE_ENERGY);
+
+            if (withdrawResult === OK)
+                return true;
+            else if(withdrawResult === ERR_NOT_IN_RANGE) {
+                creep.moveTo(resource, {visualizePathStyle: {stroke: '#ffffff'}});
+                creep.say("\u{1F697}\u{26A1}");
+            }
+            else {
+                creep.say(withdrawResult);
+            }
+        }
+
+
+        return false;
     },
 
     deposit: function (creep) {

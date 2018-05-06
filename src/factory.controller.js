@@ -101,8 +101,10 @@ module.exports = {
         }
     },
 
-    calculateRoleParts: function (role) {
-        var config = this.getRoleConfig(role)
+    calculateRoleParts: function (spawn, role) {
+        let roleConfig = creepC.getRoleConfig(role);
+        let maxSpawnEnergy = spawn.room.energyAvailable;
+
     }
 };
 
