@@ -36,6 +36,8 @@ module.exports = {
         if (!this.collectDropped(creep))
             this.collectContainer(creep);
 
+        return _.sum(creep.carry) >= creep.carryCapacity;
+
         // if (resource === null) return false;
         //
         // if(_.sum(creep.carry) < creep.carryCapacity)
@@ -85,7 +87,7 @@ module.exports = {
     },
 
     collectContainer: function (creep) {
-        let resource = creep.pos.findClosestByRange(FIND_MY_STRUCTURES, {
+        let resource = creep.pos.findClosestByRange(FIND_STRUCTURES, {
             filter: { structureType: STRUCTURE_CONTAINER}
         });
         if (resource === null) return false;
