@@ -74,9 +74,14 @@ module.exports = {
     },
 
     repairContainer: function (creep) {
-        let container = Game.getObjectById(creep.memory.targetContainer);
-        if (container.hits < container.hitsMax )
-            creep.repair(container)
+        try {
+            let container = Game.getObjectById(creep.memory.targetContainer);
+            if (container.hits < container.hitsMax )
+                creep.repair(container)
+        }
+        catch {
+
+        }
     },
 
     findContainer: function (creep) {
