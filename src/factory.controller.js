@@ -87,7 +87,7 @@ module.exports = {
 
     spawnCreep: function (spawn, role) {
         let name = Math.random().toString(36).substring(7);
-        console.log("SIMU Spawning creep with [" + this.calculateRoleParts(spawn, role).toArray() + "].");
+        console.log("SIMU Spawning creep with [" + this.calculateRoleParts(spawn, role).toString() + "].");
         switch (role) {
             case "ferry":
                 spawn.createCreep([CARRY, CARRY, CARRY, CARRY, MOVE, MOVE], name, {role: role});
