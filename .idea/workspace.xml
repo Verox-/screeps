@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31d1bb86-9592-4319-aca5-1a030be0982b" name="Default" comment="Implemented role parts scaling.">
+    <list default="true" id="31d1bb86-9592-4319-aca5-1a030be0982b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/factory.controller.js" afterPath="$PROJECT_DIR$/src/factory.controller.js" />
     </list>
@@ -98,8 +98,8 @@
       <file leaf-file-name="factory.controller.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/factory.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="117" column="25" lean-forward="true" selection-start-line="117" selection-start-column="25" selection-end-line="117" selection-end-column="25" />
+            <state relative-caret-position="314">
+              <caret line="92" column="40" lean-forward="false" selection-start-line="92" selection-start-column="40" selection-end-line="92" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -313,27 +313,6 @@
       <option name="presentableId" value="Default" />
       <updated>1525455977840</updated>
       <workItem from="1525455983912" duration="61418000" />
-    </task>
-    <task id="LOCAL-00021" summary="Upped creep capacity.">
-      <created>1525473134170</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1525473134170</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Upped creep capacity.">
-      <created>1525473236471</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1525473236471</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Emojis test again.">
-      <created>1525473696388</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1525473696388</updated>
     </task>
     <task id="LOCAL-00024" summary="EMOJISS!">
       <created>1525474046768</created>
@@ -657,11 +636,32 @@
       <option name="project" value="LOCAL" />
       <updated>1525686043813</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="Fixed incorrect array access">
+      <created>1525686219282</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1525686219282</updated>
+    </task>
+    <task id="LOCAL-00071" summary="toString not toArray...">
+      <created>1525686343287</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1525686343287</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Fixed part calculator adding one more part than nessecary.">
+      <created>1525686594168</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1525686594168</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63421000" />
+    <option name="totallyTimeSpent" value="64333000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2552" y="-8" width="1936" height="1056" extended-state="6" />
@@ -674,7 +674,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.5063966" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.49573562" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.4936034" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.4936034" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -748,9 +748,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Tried to solve creep ADHD" />
-    <MESSAGE value="Made builders build." />
-    <MESSAGE value="Fixed broken condition again..." />
     <MESSAGE value="Implemented ferry deposits to extension and spawn." />
     <MESSAGE value="Fixed misnamed call to transfer." />
     <MESSAGE value="Moved ferries higher in the spawn priority order." />
@@ -773,7 +770,10 @@
     <MESSAGE value="Ferry creeps don't get stuck on collecting now." />
     <MESSAGE value="Still trying to get feerry to work." />
     <MESSAGE value="Implemented role parts scaling." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented role parts scaling." />
+    <MESSAGE value="Fixed incorrect array access" />
+    <MESSAGE value="toString not toArray..." />
+    <MESSAGE value="Fixed part calculator adding one more part than nessecary." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed part calculator adding one more part than nessecary." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1014,8 +1014,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/factory.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="117" column="25" lean-forward="true" selection-start-line="117" selection-start-column="25" selection-end-line="117" selection-end-column="25" />
+        <state relative-caret-position="314">
+          <caret line="92" column="40" lean-forward="false" selection-start-line="92" selection-start-column="40" selection-end-line="92" selection-end-column="40" />
           <folding />
         </state>
       </provider>
