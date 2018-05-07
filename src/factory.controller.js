@@ -76,13 +76,18 @@ module.exports = {
             return;
         }
 
-        if (spawn.room.energyAvailable < spawn.room.energyCapacityAvailable) return;
+        if (spawn.room.energyAvailable < spawn.room.energyCapacityAvailable && !spawn.memory.blocked)
+        {
+            spawn.memory.blocked = Game.time;
+            return;
+        }
+        else if (spawn.room.energyAvailable > 300 && (Game.time - spawn.memory.blocked) < 120) {
+            if (Game.time % 20) console.log("Spawn blocked for " + Game.time - spawn.memory.blocked + "T");
+            return;
+        }
 
         let spawnRole = spawnQueue.shift();
         this.spawnCreep(spawn, spawnRole);
-
-        // return;
-
     },
 
     spawnCreep: function (spawn, role) {
