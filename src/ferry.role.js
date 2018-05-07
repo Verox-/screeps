@@ -124,7 +124,7 @@ module.exports = {
         creep.memory.lastAction = "deposit";
         let targets = creep.room.find(FIND_STRUCTURES, {
             filter: (structure) => {
-                return (structure.structureType === STRUCTURE_EXTENSION || structure.structureType === STRUCTURE_SPAWN) &&
+                return (structure.structureType === STRUCTURE_EXTENSION || structure.structureType === STRUCTURE_SPAWN || structure.structureType === STRUCTURE_TOWER) &&
                     structure.energy < structure.energyCapacity;
             }
         });
