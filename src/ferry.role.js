@@ -25,14 +25,23 @@ module.exports = {
     },
 
     think: function (creep) {
-
+        if (creep.memory.lastAction === undefined)
+            creep.memory.lastAction = "collect";
+        else if (creep.memory.lastAction === "collect" && _.sum(creep.carry) >= creep.carryCapacity)
+            this.deposit(creep);
+        else if (creep.memory.lastAction === "deposit" && _.sum(creep.carry) <= 0)
+            this.collect(creep);
+        else if (creep.memory.lastAction === "collect")
+            this.collect(creep);
+        else if (creep.memory.lastAction === "deposit")
+            this.deposit(creep);
+        else
         if (this.collect(creep))
             this.deposit(creep);
-
     },
 
     collect: function (creep) {
-
+        creep.memory.lastAction = "collect";
         if (!this.collectDropped(creep))
             this.collectContainer(creep);
 
@@ -112,7 +121,8 @@ module.exports = {
     },
 
     deposit: function (creep) {
-        var targets = creep.room.find(FIND_STRUCTURES, {
+        creep.memory.lastAction = "deposit";
+        let targets = creep.room.find(FIND_STRUCTURES, {
             filter: (structure) => {
                 return (structure.structureType === STRUCTURE_EXTENSION || structure.structureType === STRUCTURE_SPAWN) &&
                     structure.energy < structure.energyCapacity;
