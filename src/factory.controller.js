@@ -82,10 +82,11 @@ module.exports = {
             return;
         }
         else if (spawn.room.energyAvailable > 300 && (Game.time - spawn.memory.blocked) < 120) {
-            if (!(Game.time % 20)) console.log("Spawn blocked for " + (Game.time - spawn.memory.blocked) + "T");
+            if (!(Game.time % 20)) console.log("Spawn '"+ spawn.name +"' blocked for " + (Game.time - spawn.memory.blocked) + "T");
             return;
         }
 
+        delete spawn.memory.blocked;
         let spawnRole = spawnQueue.shift();
         this.spawnCreep(spawn, spawnRole);
     },
