@@ -113,7 +113,7 @@ module.exports = {
 
     calculateRoleParts: function (spawn, role) {
         let roleConfig = creepC.getRoleConfig(role);
-        let maxSpawnEnergy = spawn.room.energyCapacityAvailable;
+        let maxSpawnEnergy = spawn.room.energyCapacity;
 
         let roleParts = roleConfig.baseParts;
         let patternIndex = 0;
