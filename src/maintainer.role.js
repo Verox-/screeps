@@ -87,6 +87,22 @@ module.exports = {
         else {
             this.collectResource(creep);
         }
+    },
+
+    repairRampart: function (creep) {
+
+    },
+
+    repairWall: function (creep) {
+
+    },
+
+    repairRoad: function (creep) {
+
+    },
+
+    refillTower: function (creep) {
+
     }
 
 };
