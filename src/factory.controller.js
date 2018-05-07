@@ -87,23 +87,27 @@ module.exports = {
 
     spawnCreep: function (spawn, role) {
         let name = Math.random().toString(36).substring(7);
-        console.log("SIMU Spawning creep with [" + this.calculateRoleParts(spawn, role).toString() + "].");
-        switch (role) {
-            case "ferry":
-                spawn.createCreep([CARRY, CARRY, CARRY, CARRY, MOVE, MOVE], name, {role: role});
-                break;
-            case "miner":
-                spawn.createCreep([WORK, WORK, CARRY, MOVE], name, {role: role});
-                break;
-            case "constructor":
-                spawn.createCreep([WORK, CARRY, CARRY, MOVE, MOVE], name, {role: role});
-                break;
-        }
+        let parts = this.calculateRoleParts(spawn, role)
+
+        console.log("Spawning creep with [" + parts.toString() + "].");
+        spawn.createCreep(parts, name, {role: role});
+
+        // switch (role) {
+        //     case "ferry":
+        //         spawn.createCreep([CARRY, CARRY, CARRY, CARRY, MOVE, MOVE], name, {role: role});
+        //         break;
+        //     case "miner":
+        //         spawn.createCreep([WORK, WORK, CARRY, MOVE], name, {role: role});
+        //         break;
+        //     case "constructor":
+        //         spawn.createCreep([WORK, CARRY, CARRY, MOVE, MOVE], name, {role: role});
+        //         break;
+        // }
     },
 
     calculateRoleParts: function (spawn, role) {
         let roleConfig = creepC.getRoleConfig(role);
-        let maxSpawnEnergy = spawn.room.energyAvailable;
+        let maxSpawnEnergy = spawn.room.energyCapacityAvailable;
 
         let roleParts = roleConfig.baseParts;
         let patternIndex = 0;
