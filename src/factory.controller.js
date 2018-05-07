@@ -76,7 +76,7 @@ module.exports = {
             return;
         }
 
-        if (spawn.room.energyAvailable < 300) return;
+        if (spawn.room.energyAvailable < spawn.room.energyCapacityAvailable) return;
 
         let spawnRole = spawnQueue.shift();
         this.spawnCreep(spawn, spawnRole);
