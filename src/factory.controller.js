@@ -87,7 +87,7 @@ module.exports = {
 
     spawnCreep: function (spawn, role) {
         let name = Math.random().toString(36).substring(7);
-
+        console.log("SIMU Spawning creep with [" + this.calculateRoleParts(spawn, role).toArray() + "].");
         switch (role) {
             case "ferry":
                 spawn.createCreep([CARRY, CARRY, CARRY, CARRY, MOVE, MOVE], name, {role: role});
@@ -105,6 +105,27 @@ module.exports = {
         let roleConfig = creepC.getRoleConfig(role);
         let maxSpawnEnergy = spawn.room.energyAvailable;
 
+        let roleParts = roleConfig.baseParts;
+        let patternIndex = 0;
+        while (this.calculatePartsCost(roleParts) <= maxSpawnEnergy) {
+            if (patternIndex > roleConfig.pattern.length - 1) patternIndex = 0;
+
+            roleParts.push(roleConfig.pattern[patternIndex]);
+
+            patternIndex++;
+        }
+
+        return roleParts;
+    },
+
+    calculatePartsCost: function (parts) {
+
+        let cost = 0;
+        for (let i in parts) {
+            cost += BODYPART_COST[i];
+        }
+
+        return cost;
     }
 };
 

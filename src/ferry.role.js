@@ -1,7 +1,7 @@
 module.exports = {
 
     config: {
-        base: [MOVE, CARRY],
+        baseParts: [MOVE, CARRY],
         pattern: [CARRY, MOVE],
         role: "ferry",
     },

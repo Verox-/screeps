@@ -1,7 +1,7 @@
 module.exports = {
 
     config: {
-        base: [WORK, CARRY, MOVE],
+        baseParts: [WORK, CARRY, MOVE],
         pattern: [WORK, CARRY, MOVE],
         role: "maintainer",
     },
