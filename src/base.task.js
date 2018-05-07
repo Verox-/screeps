@@ -3,19 +3,10 @@
  * Testing out the concept of a Task to control creep behaviours
  */
 
-function resolveTask(details) {
-    return new global[details.name](details);
-}
+
 
 class Task {
-    details = {
-        target: null,
-        name: "Task"
-    };
-    priority = 0;
-    TASK_LIMIT = 10;
-
-    Task(constructDetails) {
+    static Task(constructDetails) {
         constructDetails.name = details.name;
         details = constructDetails;
     }
@@ -29,15 +20,13 @@ class Task {
     };
 }
 
+Task.prototype.details = {
+    name: "Task",
+}
+
 class TaskHarvest extends Task {
 
     run (creep) {
-
-        details = {
-            target: null,
-            name: "TaskHarvest"
-        };
-
         let sources = creep.room.find(FIND_SOURCES);
         let harvestResult = creep.harvest(sources[0]);
 
@@ -54,36 +43,42 @@ class TaskHarvest extends Task {
     }
 }
 
-class TaskMove extends Task {
-    details = {
-        target: null,
-        tolerance: 1,
-        name: "TaskMove"
-    };
+global["TaskHarvest"] = TaskHarvest.constructor;
 
-    run (creep) {
-        creep.moveTo(sources[0],{visualizePathStyle: {stroke: '#ffffff'}});
-
-        super.run(creep);
-    }
-
-    isComplete (creep) {
-        return false;
-    }
-}
-
-
-Task.prototype.run = function (creep) {
-
-
+TaskHarvest.prototype.details = {
+    name: "TaskHarvest"
 };
 
-Task.prototype.isComplete = function (creep) {
-    return true;
-};
+// class TaskMove extends Task {
+//     details = {
+//         target: null,
+//         tolerance: 1,
+//         name: "TaskMove"
+//     };
+//
+//     run (creep) {
+//         creep.moveTo(sources[0],{visualizePathStyle: {stroke: '#ffffff'}});
+//
+//         super.run(creep);
+//     }
+//
+//     isComplete (creep) {
+//         return false;
+//     }
+// }
 
-Task.prototype.details  = {
-    target: null,
-    name: null
-};
+//
+// Task.prototype.run = function (creep) {
+//
+//
+// };
+//
+// Task.prototype.isComplete = function (creep) {
+//     return true;
+// };
+//
+// Task.prototype.details  = {
+//     target: null,
+//     name: null
+// };
 

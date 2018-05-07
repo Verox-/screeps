@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="8b4b679f-6a6d-4a92-93ee-fcd7500f75e4" name="Depl-To-Simulocal" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="C:\Users\Verox\AppData\Local\Screeps\scripts\screeps.com\tasks" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

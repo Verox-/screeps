@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31d1bb86-9592-4319-aca5-1a030be0982b" name="Default" comment="Added gitignore.">
+    <list default="true" id="31d1bb86-9592-4319-aca5-1a030be0982b" name="Default" comment="First test of the tasks.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/base.task.js" afterPath="$PROJECT_DIR$/src/base.task.js" />
       <change beforePath="$PROJECT_DIR$/src/creep.controller.js" afterPath="$PROJECT_DIR$/src/creep.controller.js" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/main.js" />
       <change beforePath="$PROJECT_DIR$/src/miner.role.js" afterPath="$PROJECT_DIR$/src/miner.role.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,18 +21,18 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="2" lean-forward="false" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+            <state relative-caret-position="272">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="creep.controller.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="creep.controller.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/creep.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+            <state relative-caret-position="0">
+              <caret line="0" column="17" lean-forward="true" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -40,18 +41,18 @@
       <file leaf-file-name="base.task.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/base.task.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+            <state relative-caret-position="340">
+              <caret line="47" column="33" lean-forward="true" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="miner.role.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="miner.role.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/miner.role.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="21" />
+            <state relative-caret-position="272">
+              <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -149,14 +150,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/worker.role.js" />
-        <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/constructor.role.js" />
         <option value="$PROJECT_DIR$/src/maintainer.role.js" />
         <option value="$PROJECT_DIR$/src/factory.controller.js" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_4.txt" />
         <option value="$PROJECT_DIR$/src/ferry.role.js" />
-        <option value="$PROJECT_DIR$/src/base.task.js" />
         <option value="$PROJECT_DIR$/src/creep.controller.js" />
+        <option value="$PROJECT_DIR$/src/main.js" />
+        <option value="$PROJECT_DIR$/src/base.task.js" />
         <option value="$PROJECT_DIR$/src/miner.role.js" />
       </list>
     </option>
@@ -183,6 +184,28 @@
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>JSMethodCanBeStatic</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -207,6 +230,11 @@
             <path>
               <item name="screeps" type="b2602c69:ProjectViewProjectNode" />
               <item name="screeps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="screeps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="screeps" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="screeps" type="b2602c69:ProjectViewProjectNode" />
@@ -325,14 +353,7 @@
       <option name="presentableId" value="Default" />
       <updated>1525455977840</updated>
       <workItem from="1525455983912" duration="62440000" />
-      <workItem from="1525634269866" duration="8530000" />
-    </task>
-    <task id="LOCAL-00023" summary="Emojis test again.">
-      <created>1525473696388</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1525473696388</updated>
+      <workItem from="1525634269866" duration="11526000" />
     </task>
     <task id="LOCAL-00024" summary="EMOJISS!">
       <created>1525474046768</created>
@@ -670,11 +691,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525639695584</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="First test of the tasks.">
+      <created>1525644719687</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1525644719688</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70970000" />
+    <option name="totallyTimeSpent" value="73966000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2552" y="-8" width="1936" height="1056" extended-state="6" />
@@ -687,7 +715,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.5063966" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.49573562" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.4936034" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.4936034" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -742,7 +770,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented ferry deposits to extension and spawn." />
     <MESSAGE value="Fixed misnamed call to transfer." />
     <MESSAGE value="Moved ferries higher in the spawn priority order." />
     <MESSAGE value="Implemented a per-spawn spawn queue." />
@@ -767,7 +794,8 @@
     <MESSAGE value="Started prototyping of Tasks" />
     <MESSAGE value="SOme further work on tasks." />
     <MESSAGE value="Added gitignore." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added gitignore." />
+    <MESSAGE value="First test of the tasks." />
+    <option name="LAST_COMMIT_MESSAGE" value="First test of the tasks." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -894,14 +922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="2" lean-forward="false" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/constructor.role.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -910,26 +930,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/creep.controller.js">
+    <entry file="file://$PROJECT_DIR$/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/base.task.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        <state relative-caret-position="340">
+          <caret line="47" column="33" lean-forward="true" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/miner.role.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="21" />
+        <state relative-caret-position="272">
+          <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/creep.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="true" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
           <folding />
         </state>
       </provider>

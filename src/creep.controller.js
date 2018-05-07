@@ -48,5 +48,8 @@ module.exports = {
 
 Creep.prototype.tasks = [];
 Creep.prototype.addTask = function (task) {
-    if (this.task === undefined) this.task = task;
+    if (this.tasks === undefined)
+        this.tasks = [];
+
+    this.tasks.push( task );
 };
