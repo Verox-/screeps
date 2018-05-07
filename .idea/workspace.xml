@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="31d1bb86-9592-4319-aca5-1a030be0982b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/factory.controller.js" afterPath="$PROJECT_DIR$/src/factory.controller.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -98,8 +97,8 @@
       <file leaf-file-name="factory.controller.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/factory.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="92" column="40" lean-forward="false" selection-start-line="92" selection-start-column="40" selection-end-line="92" selection-end-column="40" />
+            <state relative-caret-position="450">
+              <caret line="91" column="71" lean-forward="true" selection-start-line="91" selection-start-column="71" selection-end-line="91" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -313,27 +312,6 @@
       <option name="presentableId" value="Default" />
       <updated>1525455977840</updated>
       <workItem from="1525455983912" duration="61418000" />
-    </task>
-    <task id="LOCAL-00024" summary="EMOJISS!">
-      <created>1525474046768</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1525474046768</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Multi role test">
-      <created>1525475193327</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1525475193327</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Fixed dumb bug">
-      <created>1525476114373</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1525476114373</updated>
     </task>
     <task id="LOCAL-00027" summary="Still trying to get init working.">
       <created>1525476265659</created>
@@ -657,11 +635,32 @@
       <option name="project" value="LOCAL" />
       <updated>1525686594168</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="Pushed scaling creep parts live.">
+      <created>1525687152232</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1525687152232</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Made parts calculation use total possible energy rather than available energy.">
+      <created>1525687302215</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1525687302215</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Factory now waits for total energy to equal room capacity.">
+      <created>1525689450950</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1525689450950</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64333000" />
+    <option name="totallyTimeSpent" value="65773000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2552" y="-8" width="1936" height="1056" extended-state="6" />
@@ -748,9 +747,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented ferry deposits to extension and spawn." />
-    <MESSAGE value="Fixed misnamed call to transfer." />
-    <MESSAGE value="Moved ferries higher in the spawn priority order." />
     <MESSAGE value="Implemented a per-spawn spawn queue." />
     <MESSAGE value="Fixed incorrect initialization of spawn queue array." />
     <MESSAGE value="Spawn now waits until there is enough energy available before trying to spawn the creep." />
@@ -773,7 +769,10 @@
     <MESSAGE value="Fixed incorrect array access" />
     <MESSAGE value="toString not toArray..." />
     <MESSAGE value="Fixed part calculator adding one more part than nessecary." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed part calculator adding one more part than nessecary." />
+    <MESSAGE value="Pushed scaling creep parts live." />
+    <MESSAGE value="Made parts calculation use total possible energy rather than available energy." />
+    <MESSAGE value="Factory now waits for total energy to equal room capacity." />
+    <option name="LAST_COMMIT_MESSAGE" value="Factory now waits for total energy to equal room capacity." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1014,8 +1013,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/factory.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="92" column="40" lean-forward="false" selection-start-line="92" selection-start-column="40" selection-end-line="92" selection-end-column="40" />
+        <state relative-caret-position="450">
+          <caret line="91" column="71" lean-forward="true" selection-start-line="91" selection-start-column="71" selection-end-line="91" selection-end-column="71" />
           <folding />
         </state>
       </provider>
