@@ -122,7 +122,7 @@ module.exports = {
 
         let cost = 0;
         for (let i in parts) {
-            cost += BODYPART_COST[i];
+            cost += BODYPART_COST[parts[i]];
         }
 
         return cost;
