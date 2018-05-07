@@ -115,6 +115,7 @@ module.exports = {
             patternIndex++;
         }
 
+        roleParts.pop(); // Get rid of the last element to bring it below max. Dirty fix.
         return roleParts;
     },
 
