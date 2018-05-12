@@ -80,6 +80,10 @@ export class FactoryController {
             spawn.memory.blocked = Game.time;
             return;
         }
+        else if (spawn.memory.blocked && spawn.room.energyAvailable == spawn.room.energyCapacityAvailable)
+        {
+            delete spawn.memory.blocked;
+        }
         else if (spawn.room.energyAvailable < 300 || (Game.time - spawn.memory.blocked) < 120) {
             if (!(Game.time % 20)) console.log("Spawn '"+ spawn.name +"' blocked for " + (Game.time - spawn.memory.blocked) + "T");
             return;
