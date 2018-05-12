@@ -25,6 +25,9 @@ export class RoleFerry implements Role {
     think(creep: Creep) {
         if (creep.memory.lastAction === undefined)
             creep.memory.lastAction = "collect";
+
+
+
         else if (creep.memory.lastAction === "collect" && _.sum(creep.carry) >= creep.carryCapacity)
             this.deposit(creep);
         else if (creep.memory.lastAction === "deposit" && _.sum(creep.carry) <= 0)
@@ -76,19 +79,17 @@ export class RoleFerry implements Role {
 
     collectContainer(creep: Creep) {
 
-        let containers = _.filter(creep.room.find<StructureContainer>(FIND_STRUCTURES), container => container.structureType === STRUCTURE_CONTAINER)
-        let resource = creep.pos.findClosestByRange<StructureContainer>(containers);
-
-        if (resource === null) return false;
+        let closestContainer = creep.pos.findClosestByRange(FIND_STRUCTURES, {filter: (s) => s.structureType === STRUCTURE_CONTAINER});
+        if (closestContainer === null) return false;
 
         if(_.sum(creep.carry) < creep.carryCapacity)
         {
-            let withdrawResult = creep.withdraw(resource, RESOURCE_ENERGY);
+            let withdrawResult = creep.withdraw(closestContainer, RESOURCE_ENERGY);
 
             if (withdrawResult === OK)
                 return true;
             else if(withdrawResult === ERR_NOT_IN_RANGE) {
-                creep.moveTo(resource, {visualizePathStyle: {stroke: '#ffffff'}});
+                creep.moveTo(closestContainer, {visualizePathStyle: {stroke: '#ffffff'}});
                 creep.say("\u{1F697}\u{26A1}");
             }
             else {

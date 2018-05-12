@@ -5,18 +5,23 @@ import "prototypes/Creep";
 
 import { FactoryController } from "controllers/FactoryController";
 import { CreepController } from "controllers/CreepController";
+import { TowerController } from "controllers/TowerController";
 
 
 
 let factories = new FactoryController().init();
 let creeps = new CreepController().init();
+let towers = new TowerController().init();
 
 // When compiling TS to JS and bundling with rollup, the line numbers and file names in error messages change
 // This utility uses source maps to get the line numbers and file names of the original, TS source code
 export const loop = ErrorMapper.wrapLoop(() => {
     console.log(`Current game tick is ${Game.time}`);
 
-    //new TowerController().run();
+    if (towers)
+        towers.run();
+
+
     if (factories)
         factories.run();
     else
