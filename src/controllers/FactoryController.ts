@@ -1,21 +1,20 @@
-var creepC = require("creep.controller");
+import { CreepController } from "controllers/CreepController";
 
-module.exports = {
+export class FactoryController {
 
-    init: function () {
-        if (Memory.factoryIsInitialized === true)
-            return;
-
+    public init(): FactoryController | null {
         console.log("Initializing worker memory");
 
         this.initMemory();
-    },
 
-    run: function () {
+        return this;
+    }
+
+    public run() {
         this.processTick();
-    },
+    }
 
-    initMemory: function () {
+    initMemory() {
         Memory.creepCapacity = 8;
         Memory.minerCapacity = 1;
         Memory.ferryCapacity = 2;
@@ -24,9 +23,9 @@ module.exports = {
         Memory.factories = {};
 
         Memory.factoryIsInitialized = true;
-    },
+    }
 
-    processTick: function () {
+    processTick() {
         for (let i in Game.spawns) {
             // Only evaluate the requirements every 50th tick.
             if (Game.time % 50) this.evaluateRequirements(Game.spawns[i]);
@@ -34,10 +33,10 @@ module.exports = {
             // Process this spawn's SQ.
             this.processSpawnQueue(Game.spawns[i]);
         }
-    },
+    }
 
     // Evaluates the requirements for this room to function.
-    evaluateRequirements: function (spawn) {
+    evaluateRequirements(spawn: StructureSpawn) {
 
         // THIS IS RIDICULOUS
         let liveMiners = _.filter(Game.creeps, (creep) => creep.memory.role === 'miner').length;
@@ -61,9 +60,9 @@ module.exports = {
 
         else if ((liveConstructors + queuedConstructors) < Memory.constructorCapacity)
             spawn.EnqueueSpawn("constructor");
-    },
+    }
 
-    processSpawnQueue: function(spawn) {
+    processSpawnQueue(spawn: StructureSpawn) {
         // Loop the spawns
         if (spawn.spawning || Object.keys(Game.creeps).length >= Memory.creepCapacity) return;
 
@@ -88,15 +87,19 @@ module.exports = {
 
         delete spawn.memory.blocked;
         let spawnRole = spawnQueue.shift();
-        this.spawnCreep(spawn, spawnRole);
-    },
+        if (spawnRole)
+            this.spawnCreep(spawn, spawnRole);
+    }
 
-    spawnCreep: function (spawn, role) {
+    spawnCreep(spawn: StructureSpawn, role: string) {
         let name = Math.random().toString(36).substring(7);
         let parts = this.calculateRoleParts(spawn, role)
+        let creepMemory: CreepMemory = {role: role};
+
+        if (parts === null) return;
 
         console.log("Spawning creep with [" + parts.toString() + "].");
-        spawn.createCreep(parts, name, {role: role});
+        spawn.spawnCreep(parts, name, {memory: creepMemory});
 
         // switch (role) {
         //     case "ferry":
@@ -109,29 +112,33 @@ module.exports = {
         //         spawn.createCreep([WORK, CARRY, CARRY, MOVE, MOVE], name, {role: role});
         //         break;
         // }
-    },
+    }
 
-    calculateRoleParts: function (spawn, role) {
-        let roleConfig = creepC.getRoleConfig(role);
+    calculateRoleParts(spawn: StructureSpawn, role: string) {
+        let roleConfig = CreepController.getRoleConfig(role);
         let maxSpawnEnergy = spawn.room.energyAvailable;
 
-        let roleParts = roleConfig.baseParts;
+        if (roleConfig === null) return null;
+
         let patternIndex = 0;
-        while (this.calculatePartsCost(roleParts) <= maxSpawnEnergy) {
+        let parts = roleConfig.baseParts;
+        while (this.calculatePartsCost(parts) <= maxSpawnEnergy) {
             if (patternIndex > roleConfig.pattern.length - 1) patternIndex = 0;
 
-            roleParts.push(roleConfig.pattern[patternIndex]);
+            parts.push(roleConfig.pattern[patternIndex]);
 
             patternIndex++;
         }
 
-        roleParts.pop(); // Get rid of the last element to bring it below max. Dirty fix.
-        return roleParts;
-    },
+        parts.pop(); // Get rid of the last element to bring it below max. Dirty fix.
 
-    calculatePartsCost: function (parts) {
+        return parts;
+    }
+
+    calculatePartsCost(parts: Array<BodyPartConstant>):number {
 
         let cost = 0;
+
         for (let i in parts) {
             cost += BODYPART_COST[parts[i]];
         }
@@ -140,16 +147,3 @@ module.exports = {
     }
 };
 
-StructureSpawn.prototype.EnqueueSpawn = function(role) {
-    if (!Array.isArray(this.memory.spawnQueue))
-        this.memory.spawnQueue = [];
-
-    this.memory.spawnQueue.push(role);
-};
-
-/**
- * @return {boolean}
- */
-StructureSpawn.prototype.HasQueue = function() {
-    return !(this.memory.spawnQueue === undefined || this.memory.spawnQueue.length === 0);
-};

@@ -1,30 +1,28 @@
-module.exports = {
-
+export class RoleFerry implements Role {
     config: {
-        baseParts: [MOVE, CARRY],
-        pattern: [CARRY, MOVE],
-        role: "ferry",
-    },
+        role: string,
+        baseParts: Array<BodyPartConstant>,
+        pattern: Array<BodyPartConstant>
+    };
 
-    init: function (creep, role, level) {
-        if (creep.memory.role === undefined)
-        {
-            console.log("Setting uninitialized role.");
-            creep.memory.role = role;
+    constructor() {
+        this.config = {
+            role: "ferry",
+            baseParts: [MOVE, CARRY],
+            pattern: [MOVE, CARRY]
         }
+    }
 
-        creep.memory.level = level;
-        creep.memory.eating = false;
+    init() {
 
-        console.log("Initialized a new creep.");
-    },
+    }
 
     /** @param {Creep} creep **/
-    run: function(parameters) {
-        this.think(parameters.creep);
-    },
+    run(creep: Creep) {
+        this.think(creep);
+    }
 
-    think: function (creep) {
+    think(creep: Creep) {
         if (creep.memory.lastAction === undefined)
             creep.memory.lastAction = "collect";
         else if (creep.memory.lastAction === "collect" && _.sum(creep.carry) >= creep.carryCapacity)
@@ -38,41 +36,22 @@ module.exports = {
         else
         if (this.collect(creep))
             this.deposit(creep);
-    },
+    }
 
-    collect: function (creep) {
+    collect(creep: Creep) {
         creep.memory.lastAction = "collect";
         if (!this.collectDropped(creep))
             this.collectContainer(creep);
 
         return _.sum(creep.carry) >= creep.carryCapacity;
-
-        // if (resource === null) return false;
-        //
-        // if(_.sum(creep.carry) < creep.carryCapacity)
-        // {
-        //     let pickupResult = creep.pickup(resource);
-        //     if(pickupResult === ERR_NOT_IN_RANGE) {
-        //         creep.moveTo(resource, {visualizePathStyle: {stroke: '#ffffff'}});
-        //         creep.say("\u{1F697}\u{26A1}");
-        //     }
-        //     else {
-        //         creep.say(pickupResult);
-        //     }
-        //
-        //     return true;
-        // }
-        // else // The creep is full.
-        //     return false;
-
-    },
+    }
 
     /**
      * Finds dropped resources in this room and tries to pick them up.
      * @param creep Reference to the creep
      * @returns {boolean} TRUE if pick up success
      */
-    collectDropped: function (creep) {
+    collectDropped(creep: Creep) {
         let resource = creep.pos.findClosestByRange(FIND_DROPPED_RESOURCES);
         if (resource === null) return false;
 
@@ -87,18 +66,19 @@ module.exports = {
                 creep.say("\u{1F697}\u{26A1}");
             }
             else {
-                creep.say(pickupResult);
+                creep.say(pickupResult.toString());
             }
         }
 
 
         return false;
-    },
+    }
 
-    collectContainer: function (creep) {
-        let resource = creep.pos.findClosestByRange(FIND_STRUCTURES, {
-            filter: { structureType: STRUCTURE_CONTAINER}
-        });
+    collectContainer(creep: Creep) {
+
+        let containers = _.filter(creep.room.find<StructureContainer>(FIND_STRUCTURES), container => container.structureType === STRUCTURE_CONTAINER)
+        let resource = creep.pos.findClosestByRange<StructureContainer>(containers);
+
         if (resource === null) return false;
 
         if(_.sum(creep.carry) < creep.carryCapacity)
@@ -112,15 +92,15 @@ module.exports = {
                 creep.say("\u{1F697}\u{26A1}");
             }
             else {
-                creep.say(withdrawResult);
+                creep.say(withdrawResult.toString());
             }
         }
 
 
         return false;
-    },
+    }
 
-    deposit: function (creep) {
+    deposit(creep: Creep) {
         creep.memory.lastAction = "deposit";
         let targets = creep.room.find(FIND_STRUCTURES, {
             filter: (structure) => {

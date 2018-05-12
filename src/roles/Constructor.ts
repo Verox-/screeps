@@ -1,59 +1,63 @@
-module.exports = {
+export class RoleConstructor implements Role {
 
     config: {
-        baseParts: [WORK, CARRY, MOVE],
-        pattern: [WORK, CARRY, MOVE],
-        role: "constructor",
-    },
+        role: string,
+        baseParts: Array<BodyPartConstant>,
+        pattern: Array<BodyPartConstant>
+    };
 
-    init: function (creep, role, level) {
-        if (creep.memory.role === undefined)
-        {
-            console.log("Setting uninitialized role.");
-            creep.memory.role = role;
+    constructor() {
+        this.config = {
+            role: "constructor",
+            baseParts: [WORK, CARRY, MOVE],
+            pattern: [WORK, CARRY, MOVE],
         }
+    }
 
-        creep.memory.level = level;
-        creep.memory.eating = false;
+    init() {
 
-        console.log("Initialized a new creep.");
-    },
+    }
 
     /** @param {Creep} creep **/
-    run: function(parameters) {
-        this.think(parameters.creep);
-    },
+    run(creep: Creep) {
+        this.think(creep);
+    }
 
-    think: function (creep) {
+    think(creep: Creep) {
         // Override the constructor's task list and upgrade the controller if it's low..
-        if (Game.spawns['Seed'].room.controller.ticksToDowngrade < 4000) {
+        let room: Room = Game.spawns['Seed'].room;
+        if (room.controller && room.controller.ticksToDowngrade < 4000) {
             this.upgrade(creep);
         }
         else {
             this.build(creep);
         }
-    },
+    }
 
-    collectResource: function (creep) {
+    collectResource(creep: Creep) {
         // Stop collection if we're pending a build.
         if (Game.spawns['Seed'].HasQueue()) return;
 
-        let sources = creep.room.find(FIND_MY_STRUCTURES, {
-            filter: { structureType: STRUCTURE_SPAWN }
-        });
+        let sources = creep.room.find(FIND_MY_SPAWNS);
 
-        if (sources[0].energy < 100) return;
-
-        if(creep.withdraw(sources[0], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
+        console.log("Withdrawing from" + sources[0]);
+        let withdrawResult = creep.withdraw(sources[0], RESOURCE_ENERGY);
+        if(withdrawResult === ERR_NOT_IN_RANGE) {
             creep.moveTo(sources[0], {visualizePathStyle: {stroke: '#ffaa00'}});
         }
-    },
+        else {
+            console.log("ERR" + withdrawResult);
+        }
+    }
 
-    upgrade: function (creep) {
+    upgrade(creep: Creep) {
+        let room: Room = Game.spawns['Seed'].room;
+        if (!room.controller) return;
+
         if (_.sum(creep.carry) < creep.carryCapacity && !creep.memory.working)
             this.collectResource(creep);
-        else if(creep.upgradeController(Game.spawns['Seed'].room.controller) === ERR_NOT_IN_RANGE) {
-            creep.moveTo(Game.spawns['Seed'].room.controller, {visualizePathStyle: {stroke: '#ffffff'}});
+        else if(Game.spawns['Seed'].room.controller !== undefined && creep.upgradeController(room.controller) === ERR_NOT_IN_RANGE) {
+            creep.moveTo(room.controller, {visualizePathStyle: {stroke: '#ffffff'}});
             creep.say("\u{1F53A}");
             creep.memory.working = true;
         }
@@ -61,9 +65,9 @@ module.exports = {
             creep.memory.working = false;
             creep.say("\u{1F37D}");
         }
-    },
+    }
 
-    build: function (creep) {
+    build(creep: Creep) {
         if(creep.memory.working && creep.carry.energy === 0) {
             creep.memory.working = false;
             creep.say('ð');
@@ -89,4 +93,4 @@ module.exports = {
         }
     }
 
-};
+}
