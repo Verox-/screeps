@@ -10,7 +10,11 @@ let cfg;
 const dest = process.env.DEST;
 const apiKey = process.env.SCREEPS_API_KEY;
 
-if ((cfg = require("./screeps")) == null) {
+try {
+    cfg = require("./screeps");
+}
+
+if (cfg == null) {
   cfg = {
       "protocol": "https",
       "hostname": "screeps.com",
