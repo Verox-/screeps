@@ -8,11 +8,35 @@ import screeps from "rollup-plugin-screeps";
 
 let cfg;
 const dest = process.env.DEST;
-if (!dest) {
-  console.log("No destination specified - code will be compiled but not uploaded");
-} else if ((cfg = require("./screeps")[dest]) == null) {
-  throw new Error("Invalid upload destination");
+const apiKey = process.env.SCREEPS_API_KEY;
+
+if ((cfg = require("./screeps")) == null) {
+  cfg = {
+      "protocol": "https",
+      "hostname": "screeps.com",
+      "port": 443,
+      "path": "/",
+      "branch": "auto"
+  };
+
+  console.info("No API config specified, using default.");
 }
+
+if (dest) {
+    cfg.branch = dest;
+    console.info("Uploading to branch '" + dest + "'.");
+}
+
+if (!apiKey) {
+  throw new Error("Invalid API key specified.");
+}
+else if (apiKey.length !== 36) {
+  console.log("API Key Length was " + apiKey.length);
+  throw new Error("Invalid API key specified.");
+} else {
+    cfg.token = apiKey;
+}
+
 
 export default {
   input: "src/main.ts",
