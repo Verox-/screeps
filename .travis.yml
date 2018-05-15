@@ -4,6 +4,5 @@ node_js:
 install:
   - npm install
 script:
-  - echo "Deploying "
   - npm --version
   - rollup -c --environment SCREEPS_API_KEY:$DEPLOY_API_TOKEN
